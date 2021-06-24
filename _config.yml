@@ -8,7 +8,7 @@ title:               김우석
 tagline:             '개발자'
 description:         '이 페이지는 <a href="http://jekyllrb.com" target="_blank">김우석</a>의 페이지입니다. 모든 글은 직접 타자로 적고 이해한 글만을 올립니다.'
 url:                 http://kimwoo123.github.io
-baseurl:             'http://kimwoo123.github.io'
+baseurl:             ''
 paginate:            5
 
 # About/contact
