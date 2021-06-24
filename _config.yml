@@ -1,25 +1,23 @@
-title:              김우석
-email:              eypk9673@naver.com
-description:        Clean Blog
-author:             KIM WOO SEOK
-baseurl:            "/"
-url:                "https://kimwoo123.github.io"
+# Permalinks
+#
+# Use of `relative_permalinks` ensures post links from the index work properly.
+permalink:           pretty
 
-# Social Profiles
-twitter_username:   
-github_username:    kimwoo123
-facebook_username:  eypk9673
-instagram_username:  eypk9673
-linkedin_username:
+# Setup
+title:               김우석
+tagline:             '개발자'
+description:         '이 페이지는 <a href="http://jekyllrb.com" target="_blank">김우석</a>의 페이지입니다. 모든 글은 직접 타자로 적고 이해한 글만을 올립니다.'
+url:                 http://kimwoo123.github.io
+baseurl:             'http://kimwoo123.github.io'
+paginate:            5
 
-# Add your google-analytics ID here to activate google analytics
-google_analytics:   UA-XXXXXXXXX-X # out your google-analytics code
+# About/contact
+author:
+  name:              KIM WOOSEOK
+  url:               https://www.instagram.com/eypk9673/
+  email:             eypk9673@naver.com
 
-# Build settings
-markdown:           kramdown
-paginate:           5
-paginate_path:      "/posts/page:num/"
-plugins:
-  - jekyll-feed
-  - jekyll-paginate
-  - jekyll-sitemap ## Uncomment this line to silently generate a sitemaps.org compliant sitemap for your Jekyll site
+# Custom vars
+version:             1.0.0
+gems: [jekyll-paginate]
+plugins: [jekyll-paginate]
