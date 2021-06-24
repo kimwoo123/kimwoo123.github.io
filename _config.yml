@@ -2,7 +2,7 @@ title:              김우석
 email:              eypk9673@naver.com
 description:        Clean Blog
 author:             KIM WOO SEOK
-baseurl:            "/kimwooseok"
+baseurl:            "/"
 url:                "https://kimwoo123.github.io"
 
 # Social Profiles
