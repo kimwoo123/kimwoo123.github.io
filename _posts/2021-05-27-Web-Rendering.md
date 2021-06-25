@@ -13,8 +13,8 @@ categories: Web
 서버에 잘 만들어진 HTML 문서들이 존재하고, 사용자가 브라우저에서 주소를 입력하면 서버에 이미 배포되어져 있는 HTML 문서를 보여준다.
 
 - 다른 링크를 클릭하면 페이지 전체가 업데이트 된다
-- <iframe>태그가 생기면서 페이지 내에서 부분적으로 문서를 받아와서 업데이트 할 수 있게 됨
-- 이후에 <XMLHttpRequest>가 개발이 되면서 HTML문서 전체가 아니라 JSON과 같은 포맷으로 서버에서 필요한 정보만 받아올 수 있게 되었다
+- 'iframe'태그가 생기면서 페이지 내에서 부분적으로 문서를 받아와서 업데이트 할 수 있게 됨
+- 이후에 'XMLHttpRequest'가 개발이 되면서 HTML문서 전체가 아니라 JSON과 같은 포맷으로 서버에서 필요한 정보만 받아올 수 있게 되었다
 - 이러한 방식이 AJAX 라는 이름을 갖게 되고, SPA가 개발되었다
 
 ### SPA
@@ -41,7 +41,8 @@ Multi Page Applicaton
 - 개발이 복잡하게 된다. 개발자들은 클라이언트와 서버사이드 모두에 대해 프레임워크들을 사용해야 한다.
 - MPA는 웹을 구성하는 전통적인 방법으로, Server Side Rendering 방식을 사용해왔다.
 
-![https://miro.medium.com/max/700/1*7yuDF5swqDOd6TlIhsdxTg.png](https://miro.medium.com/max/700/1*7yuDF5swqDOd6TlIhsdxTg.png)
+![../../../../../public/assets/2021-05-27-Web-Rendering/ssr_csr%202.png](../../../../../public/assets/2021-05-27-Web-Rendering/ssr_csr%202.png)
+
 
 ### CSR
 

@@ -350,6 +350,10 @@ a.sidebar-nav-item:focus {
   color: #9a9a9a;
 }
 
+.post-content{
+  font-family: sans-serif;
+}
+
 
 /* Related posts */
 .related {

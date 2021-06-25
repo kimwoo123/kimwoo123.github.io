@@ -34,7 +34,7 @@ categories: Web
 
       캐시는 재검사가 필요할 때, 원 서버에 작은 재검사 요청을 보낸다. 콘텐츠가 변경되지 않았다면 서버는 아주 작은 304 Not Modified 응답을 보낸다. 그 사본이 여전히 유효함을 알게 된 캐시는 즉각 사본이 신선하다고 임시로 다시 표시한 뒤 그 사본을 클라이언트에 제공한다. 이를 재검사 적중 혹은 **느린 적중**이라고 부른다.
 
-    ![http://tlog.tammolo.com/static/4fa8cfab25534142c49632ef82876d9c/fc7c4/Untitled-7d68a7aa-ce72-47bf-94d0-cf3cbe42b83e.png](http://tlog.tammolo.com/static/4fa8cfab25534142c49632ef82876d9c/fc7c4/Untitled-7d68a7aa-ce72-47bf-94d0-cf3cbe42b83e.png)
+    ![../../../../../public/assets/2021-04-21-HTTP-Cache/Cache.png](../../../../../public/assets/2021-04-21-HTTP-Cache/Cache.png)
 
     HTTP는  캐시된 객체를 재확인하기 위한 몇 가지 도구를 제공하는데 그중에 가장 많이 쓰이는 것은 If-Modified-Sinced 헤더이다. 서버에게 보내는 GET 요청에 이 헤더를 추가하면 캐시된 시간 이후에 변경된 경우에만 사본을 보내달라는 의미가 된다
 

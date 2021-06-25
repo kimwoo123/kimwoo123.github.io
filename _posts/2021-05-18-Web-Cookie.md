@@ -74,13 +74,13 @@ referer: https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/User-Agent
         - 쿠키는 어떤 정보도 포함할 수 있지만, 서버가 사용자 추적 용도로 생성한 유일한 단순 식별 번호만 포함하기도 한다. 예를 들어 밑의 그림 같이 서버는 id="34294"라는 쿠키를 사용자에게 할당한다. 서버는 이 쿠키 값으로 데이터베이스에서 사용자의 정보를 찾는데 사용할 수 있다.
         - 사용자가 나중에 같은 사이트를 방문하면, 브라우저는 서버가 이 사용자에게 할당했던 쿠키를 Cookie 요청 헤더에 기술해 전송한다.
 
-        ![http://tlog.tammolo.com/static/562460df7dd73410c3a875b22b17a57e/3e1c2/Untitled-952601c9-ba42-40e8-912f-83f46ad18c4a.png](http://tlog.tammolo.com/static/562460df7dd73410c3a875b22b17a57e/3e1c2/Untitled-952601c9-ba42-40e8-912f-83f46ad18c4a.png)
+        ![../../../../../public/assets/2021-05-18-Web-Cookie/cookie1.png](../../../../../public/assets/2021-05-18-Web-Cookie/cookie1.png)
 
         웹 서버의 쿠키 할당
 
         - 브라우저는 쿠키 정보를 저장할 책임이 있는데, 이 시스템을 'HTTP 상태 관리 체계'라고 한다.
 
-        ![../../../../../public/assets/2021-06-01-Web-Cookie/cookie.jpg](../../../../../public/assets/2021-06-01-Web-Cookie/cookie.jpg)
+        ![../../../../../public/assets/2021-05-18-Web-Cookie/cookie.png](../../../../../public/assets/2021-05-18-Web-Cookie/cookie.png)
 
         Expire / Max-Age 즉 파기되는 시점이 정해진 쿠키는 지속쿠키, 정해지지 않은 쿠키는 세션쿠키라고 한다.
 
