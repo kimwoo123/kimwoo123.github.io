@@ -1,4 +1,4 @@
-I"�<<h1 id="인코딩">인코딩</h1>
+I"�<<p>인코딩이란 무엇인가</p>
 
 <h3 id="teleprinter-전신타자기"><strong>teleprinter (<a href="https://www.britannica.com/technology/teleprinter">전신타자기</a>)</strong></h3>
 
@@ -18,7 +18,7 @@
 
 <p>그래서 이러한 혼재된 Extended ASCII characters를 표준화 하기 위해 ANSI 표준이 등장한다.</p>
 
-<p><img src="https://blog.kakaocdn.net/dn/U7eme/btqF0Su6LtE/gZ8NbLdzng0i2ALSflzwd1/img.png" alt="https://blog.kakaocdn.net/dn/U7eme/btqF0Su6LtE/gZ8NbLdzng0i2ALSflzwd1/img.png" title="들어가나요" /></p>
+<p><img src="https://blog.kakaocdn.net/dn/U7eme/btqF0Su6LtE/gZ8NbLdzng0i2ALSflzwd1/img.png&quot;" alt="https://blog.kakaocdn.net/dn/U7eme/btqF0Su6LtE/gZ8NbLdzng0i2ALSflzwd1/img.png" /></p>
 
 <p>ANSI 표준 ASCII 코드. ‘A’는 65에 할당되어 있고 이는 이진수로 1000001이며 ‘a’는 97에 할당되어 있고 이진수로 1100001 이다</p>
 
@@ -46,7 +46,7 @@
 
 <p>이것들은 단지 Unicode code point의 묶음이고 숫자일 뿐이다. 이게 메모리에 어떤 식으로 저장되거나 텍스트로 어떻게 표현될까?</p>
 
-<h3 id="인코딩-1">인코딩</h3>
+<h3 id="인코딩">인코딩</h3>
 
 <hr />
 
