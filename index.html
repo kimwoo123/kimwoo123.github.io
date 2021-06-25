@@ -12,6 +12,7 @@ title: Home
       </a>
       <span class="post-date">{{ post.date | date_to_string }}</span>
     </li>
+    <hr>
     <span class="post-content text-truncate">{{ post.content | truncate:60, "..." }}</span>
   </div>
   {% endfor %}

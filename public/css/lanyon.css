@@ -317,6 +317,9 @@ a.sidebar-nav-item:focus {
 .post-title,
 .post-title a {
   color: #268bd2;
+  font-family: sans-serif;
+  font-size: 1.5rem;
+  display: block;
 }
 .page-title,
 .post-title {
@@ -327,7 +330,7 @@ a.sidebar-nav-item:focus {
 
 /* Meta data line below post title */
 .post-date {
-  font-size: 80%;
+  font-size: 70%;
   display: inline;
   margin-top: -.5rem;
   margin-bottom: 1rem;
