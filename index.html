@@ -2,23 +2,21 @@
 layout: default
 title: Home
 ---
-
+<ul>
 <div class="posts">
   {% for post in paginator.posts %}
   <div class="post">
-    <h1 class="post-title">
+    <li class="post-title">
       <a href="{{ site.baseurl }}/{{ post.url }}">
         {{ post.title }}
       </a>
-    </h1>
-
-    <span class="post-date">{{ post.date | date_to_string }}</span>
-
-    {{ post.content }}
+      <span class="post-date">{{ post.date | date_to_string }}</span>
+    </li>
+    <span class="post-content text-truncate">{{ post.content | truncate:60, "..." }}</span>
   </div>
   {% endfor %}
 </div>
-
+</ul>
 <div class="pagination">
   {% if paginator.next_page %}
     <a class="pagination-item older" href="{{ site.baseurl }}/page{{paginator.next_page}}">Older</a>
@@ -35,4 +33,5 @@ title: Home
     <span class="pagination-item newer">Newer</span>
   {% endif %}
 </div>
+
 

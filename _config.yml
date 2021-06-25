@@ -21,3 +21,5 @@ author:
 version:             1.0.0
 gems: [jekyll-paginate]
 plugins: [jekyll-paginate]
+category_dir: category/
+tag_dir: tag/
