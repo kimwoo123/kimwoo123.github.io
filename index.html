@@ -7,7 +7,7 @@ title: Home
   {% for post in paginator.posts %}
   <div class="post">
     <li class="post-title">
-      <a href="{{ site.baseurl }}/{{ post.url }}">
+      <a href="{{ site.url }}/{{ post.url }}">
         {{ post.title }}
       </a>
       <span class="post-date">{{ post.date | date_to_string }}</span>
@@ -33,5 +33,6 @@ title: Home
     <span class="pagination-item newer">Newer</span>
   {% endif %}
 </div>
+
 
 
