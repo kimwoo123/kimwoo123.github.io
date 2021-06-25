@@ -1,4 +1,4 @@
-I"�<h1 id="캐시">캐시</h1>
+I"]<p>캐시란 무엇인가?</p>
 
 <p>웹 캐시는 자주 쓰이는 문서의 사본을 자동으로 보관하는 HTTP 장치다. 웹 요청이 캐시에 도착했을 때, 캐시된 로컬 사본이 존재한다면, 그 문서는 원 서버가 아니라 그 캐시로부터 제공된다. 캐시는 다음과 같은 혜택을 준다.</p>
 
@@ -37,7 +37,7 @@
 캐시는 재검사가 필요할 때, 원 서버에 작은 재검사 요청을 보낸다. 콘텐츠가 변경되지 않았다면 서버는 아주 작은 304 Not Modified 응답을 보낸다. 그 사본이 여전히 유효함을 알게 된 캐시는 즉각 사본이 신선하다고 임시로 다시 표시한 뒤 그 사본을 클라이언트에 제공한다. 이를 재검사 적중 혹은 **느린 적중**이라고 부른다.
 </code></pre></div>    </div>
 
-    <p><img src="http://tlog.tammolo.com/static/4fa8cfab25534142c49632ef82876d9c/fc7c4/Untitled-7d68a7aa-ce72-47bf-94d0-cf3cbe42b83e.png" alt="http://tlog.tammolo.com/static/4fa8cfab25534142c49632ef82876d9c/fc7c4/Untitled-7d68a7aa-ce72-47bf-94d0-cf3cbe42b83e.png" /></p>
+    <p><img src="../../../../../public/assets/2021-04-21-HTTP-Cache/Cache.png" alt="../../../../../public/assets/2021-04-21-HTTP-Cache/Cache.png" /></p>
 
     <p>HTTP는  캐시된 객체를 재확인하기 위한 몇 가지 도구를 제공하는데 그중에 가장 많이 쓰이는 것은 If-Modified-Sinced 헤더이다. 서버에게 보내는 GET 요청에 이 헤더를 추가하면 캐시된 시간 이후에 변경된 경우에만 사본을 보내달라는 의미가 된다</p>
 

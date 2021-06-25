@@ -1,4 +1,4 @@
-I"s<p>웹 렌더링은 어떠한 과정으로 이루어질까?</p>
+I"�<<p>웹 렌더링은 어떠한 과정으로 이루어질까?</p>
 
 <h2 id="crp">CRP</h2>
 
@@ -25,7 +25,7 @@
 
 <p>서버에 요청을 보내면 서버는 응답과 함께 데이터를 보내준다. 컴퓨터는 0과 1밖에 이해하지 못하기 때문에 브라우저는 바이트화 된 데이터를 받아온다. 바이트화 된 데이터는 8자리의 2진수이며 이를 2자리의 16진수로 나타낸 것이 밑에 보이는 hex-view이다.</p>
 
-<p><img src="%E1%84%8B%E1%85%B0%E1%86%B8%20%E1%84%85%E1%85%A6%E1%86%AB%E1%84%83%E1%85%A5%E1%84%85%E1%85%B5%E1%86%BC%E1%84%8B%E1%85%B4%20%E1%84%80%E1%85%AA%E1%84%8C%E1%85%A5%E1%86%BC%20d1b1327c75ea43219b88357ad9ca4d32/hex_view.jpg" alt="%E1%84%8B%E1%85%B0%E1%86%B8%20%E1%84%85%E1%85%A6%E1%86%AB%E1%84%83%E1%85%A5%E1%84%85%E1%85%B5%E1%86%BC%E1%84%8B%E1%85%B4%20%E1%84%80%E1%85%AA%E1%84%8C%E1%85%A5%E1%86%BC%20d1b1327c75ea43219b88357ad9ca4d32/hex_view.jpg" /></p>
+<p><img src="../../../../../public/assets/2021-06-01-Web-CRP/hex_view.jpg" alt="../../../../../public/assets/2021-06-01-Web-CRP/hex_view.jpg" /></p>
 
 <p>fiddler을 사용하여 구글에 접속할 때 보낸 request와 받은 response를 16진수로 나타낸 것이다.</p>
 
@@ -49,7 +49,7 @@
 <span class="nt">&lt;/html&gt;</span>
 </code></pre></div></div>
 
-<p><img src="%E1%84%8B%E1%85%B0%E1%86%B8%20%E1%84%85%E1%85%A6%E1%86%AB%E1%84%83%E1%85%A5%E1%84%85%E1%85%B5%E1%86%BC%E1%84%8B%E1%85%B4%20%E1%84%80%E1%85%AA%E1%84%8C%E1%85%A5%E1%86%BC%20d1b1327c75ea43219b88357ad9ca4d32/DOM.jpg" alt="%E1%84%8B%E1%85%B0%E1%86%B8%20%E1%84%85%E1%85%A6%E1%86%AB%E1%84%83%E1%85%A5%E1%84%85%E1%85%B5%E1%86%BC%E1%84%8B%E1%85%B4%20%E1%84%80%E1%85%AA%E1%84%8C%E1%85%A5%E1%86%BC%20d1b1327c75ea43219b88357ad9ca4d32/DOM.jpg" /></p>
+<p><img src="../../../../../public/assets/2021-06-01-Web-CRP/DOM.jpg" alt="../../../../../public/assets/2021-06-01-Web-CRP/DOM.jpg" /></p>
 
 <p>단순한 텍스트였던 HTML 문서는 위와 같은 노드 트리로 표현된다.</p>
 
@@ -90,240 +90,9 @@
   <li>Characters → Tokens 토큰화
     <ul>
       <li>브라우저가 문자열을 <a href="https://html.spec.whatwg.org/#parsing-main-inhtml">W3C HTML5 표준</a>에 지정된 고유 토큰으로 변환한다.</li>
-      <li>
-        <p>파싱 알고리즘 (블로그 전문 인용)</p>
-
-        <p>## 브라우저의 html 오류 유형</p>
-
-        <p>참고 사이트 : <a href="https://d2.naver.com/helloworld/59361">https://d2.naver.com/helloworld/59361</a></p>
-
-        <p>위 사이트의 파싱 알고리즘 부터 읽어봤다.</p>
-
-        <p><a href="http://htmlcxx.sourceforge.net/">http://htmlcxx.sourceforge.net/</a> &gt; c++ html 파서</p>
-
-        <p>## 파싱 알고리즘</p>
-
-        <p>HTML 은 일반적인 하향식 또는 상향식 파서로 파싱이 안되는데 이유는 다음과 같다.</p>
-
-        <ol>
-          <li>언어의 너그러운 속성.</li>
-          <li>잘 알려져 있는 HTML 오류에 대한 브라우저의 관용</li>
-          <li>변경에 의한 재파싱. 일반적으로 소스는 파싱하는 동안 변하지 않지만 HTML 에서 document.write 을 포함하고 있는스크립트 태그는 토큰을 추가할 수 있기 때문에 실제로는 입력 과정에서 파싱이 수정된다.일반적인 파싱 기술을 사용할 수 없기 때문에 브라우저는 HTML 파싱을 위해 별도의 파서를 생성한다.</li>
-        </ol>
-
-        <p><a href="https://html.spec.whatwg.org/multipage/parsing.html">https://html.spec.whatwg.org/multipage/parsing.html</a> &gt; 파싱 알고리즘 설명 페이지</p>
-
-        <p>초기 상태는 “자료 상태” 이다. &lt; 문자를 만나면 상태는 “태그 열림 상태”로 변한다. a 부터 z까지의 문자를 만나면 “시작</p>
-
-        <p>태그 토큰”을 생성하고 상태는 “태그 이름 상태”로 변하는데 이 상태는 &gt; 문자를 만날 때까지 유지한다. 각 문자에는 새로운 토큰 이름이 붙는데 이 경우 생성된 토큰은 html 토큰이다.</p>
-
-        <blockquote>
-          <p>문자에 도달하면 현재 토큰이 발행되고 상태는 다시 “자료 상태”로 바뀐다.</p>
-        </blockquote>
-
-        <p>태그는 동일한 절차에 따라 처리된다. 지금까지 html 태그와 body 태그를 발행했고 다시 “자료 상태”로 돌아왔다.</p>
-
-        <p>Hello World의 H 문자를 만나면 문자 토큰이 생성되고 발행될 것이다. 이것은 종료 태그의 &lt; 문자를 만날 때까지 진행된다. Hello World의 각 문자를 위한 문자 토큰을 발행할 것이다.</p>
-
-        <p>다시 “태그 열림 상태”가 되었다. / 문자는 종료 태그 토큰을 생성하고 “태그 이름 상태”로 변경 될 것이다. 이 상태는 &gt; 문자를 만날 때까지 유지된다. 그리고 새로운 태그 토큰이 발행되고 다시 “자료 상태”가 된다. 또한 동일하게 처리될 것이다.</p>
-
-        <p>### 브라우저의 오류 처리</p>
-
-        <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  &lt;html&gt;
-    &lt;mytag&gt;&lt;/mytag&gt;
-    &lt;div&gt;
-      &lt;p&gt;
-    &lt;/div&gt;
-    Really lousy HTML
-    &lt;/p&gt;
-  &lt;/html&gt;
-</code></pre></div>        </div>
-
-        <p>mytag 는 표준 태그가 아니고 “p” 태그와 “div” 태그는 중첩 오류가 있다. 그러나 브라우저는 투덜거리지 않고 올바르게 표시한다.</p>
-
-        <p>이는 파서가 HTML 제작자의 실수를 수정했기 때문이다.</p>
-
-        <p>파서는 적어도 다음과 같은 오류를 처리해야 한다.</p>
-
-        <ol>
-          <li>어떤 태그의 안쪽에 추가하려는 태그가 금지된 것일 때 일단 허용된 태그를 먼저 닫고 금지된 태그는 외부에 추가한다.</li>
-          <li>파서가 직접 요소를 추가해서는 안된다. 문서 제작자에 의해 뒤늦게 요소가 추가될 수 있고 생략 가능한 경우도 있다.HTML, HEAD, BODY, TBODY, TR, TD, LI 태그가 이런 경우에 해당한다.</li>
-          <li>인라인 요소 안쪽에 블록 요소가 있는 경우 부모 블록 요소를 만날 때까지 모든 인라인 태그를 닫는다.</li>
-          <li>이런 방법이 도움이 되지 않으면 태그를 추가하거나 무시할 수 있는 상태가 될 때까지 요소를 닫는다.웹킷이 오류를 처리하는 예는 다음과 같다.</li>
-        </ol>
-
-        <p>### 대신</p>
-
-        <p>어떤 사이트는대신을 사용한다. 인터넷 익스플로러, 파이어폭스와 호환성을 갖기 위해 웹킷은 이것을으로 간주한다.</p>
-
-        <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>   if(t-&gt;isCloseTag(brTag) &amp;&amp; m_document-&gt;inCompatMode()) {
-      reportError(MalformedBRError);
-      t-&gt;beginTag = true;
-  }
-
-</code></pre></div>        </div>
-
-        <p>오류는 내부적으로 처리하고 사용자에게는 표시하지 않는다.</p>
-
-        <p>### 어긋난 표</p>
-
-        <p>어긋난 표는 표 안에 또 다른 표가 th 또는 td 셀 내부에 있지 않은 것을 의미한다. 아래 예제와 같은 경우를 말한다.</p>
-
-        <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  &lt;table&gt;
-
-      &lt;table&gt;
-
-      &lt;tr&gt;&lt;td&gt;inner table&lt;/td&gt;&lt;/tr&gt;
-
-      &lt;/table&gt;
-
-      &lt;tr&gt;&lt;td&gt;outer table&lt;/td&gt;&lt;/tr&gt;
-
-  &lt;/table&gt;
-</code></pre></div>        </div>
-
-        <p>이런 경우 웹킷은 표의 중첩을 분해하여 형제 요소가 되도록 처리한다.</p>
-
-        <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  &lt;table&gt;
-
-      &lt;tr&gt;&lt;td&gt;outer table&lt;/td&gt;&lt;/tr&gt;
-
-  &lt;/table&gt;
-
-  &lt;table&gt;
-
-      &lt;tr&gt;&lt;td&gt;inner table&lt;/td&gt;&lt;/tr&gt;
-
-  &lt;/table&gt;
-</code></pre></div>        </div>
-
-        <p>코드는 다음과 같다.</p>
-
-        <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  if(m_inStrayTableContent &amp;&amp; localName == tableTag)
-  popBlock(tableTag);
-</code></pre></div>        </div>
-
-        <p>웹킷은 이런 오류를 처리하는데 스택을 사용한다. 안쪽의 표는 바깥쪽 표의 외부로 옮겨져서 형제 요소가 된다.</p>
-
-        <p>### 중첩된 폼 요소</p>
-
-        <p>폼 안에 또 다른 폼을 넣은 경우 안쪽의 폼을 무시된다.</p>
-
-        <p>### 태그 중첩이 너무 깊을 때</p>
-
-        <p>www.liceo.edu.mx 사이트는 약 1,500 개 수준의 태그 중첩이 되어 있는 예제인데 모든 요소가 <strong>로 되어있다.</strong></p>
-
-        <p><strong>최대 20개의 중첩만 허용하고 나머지는 무시한다.</strong></p>
-
-        <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  **bool HTMLParser::allowNestedRedundantTag(const AtomicString&amp; tagName) 
-  {
-          
-      unsigned i = 0;
-      for (HTMLStackElem* curr = m_blockStack;
-          i &lt; cMaxRedundantTagDepth &amp;&amp; curr &amp;&amp; curr-&gt;tagName == tagName; 
-          curr = curr-&gt;next, i++) { }
-      return i != cMaxRedundantTagDepth;
-  }**
-</code></pre></div>        </div>
-
-        <p><strong>**잘 못 닫힌 html 또는 body 태그
-  깨진 html 을 지원한다. 일부 바보 같은 페이지는 문서가 끝나기 전에 body 를 닫아버리기 때문에 브라우저는 body 태그를 닫지 않는다. 대신 종료를 위해 end() 를 호출한다.</strong>**</p>
-
-        <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  **if (t-&gt;tagName == htmlTag || t-&gt;tagName == bodyTag ) 
-     return;**
-</code></pre></div>        </div>
-
-        <p><strong>• 안 닫힌 태그, 안 닫힌 따옴표 등에 대해 블링크나 웹킷은 어떻게 처리하고 있는지 알아볼 것</strong></p>
-
-        <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
-  **unexpected-character-in-unquoted-attribute-value
-  This error occurs if the parser encounters a U+0022 ("), U+0027 ('), U+003C (&lt;), U+003D (=), or U+0060 (`) code point in an unquoted attribute value.
-  The parser includes such code points in the attribute value.
-  Code points that trigger this error are usually a part of another syntactic construct and can be a sign of a typo around the attribute value.
-  U+0060 (`) is in the list of code points that trigger this error because certain legacy user agents treat it as a quote.
-  For example, consider the following markup:
-  &lt;div foo=b'ar'&gt;
-  Due to a misplaced U+0027 (') code point the parser sets the value of the "foo" attribute to "b'ar'".**
-</code></pre></div>        </div>
-
-        <p><strong>• encoding 을 어떻게 할 것인가…
-  • 태그의 의미를 존중하는 html 필터 만들기 - streaming 방식…
-  • 태그 사이에 나오는 텍스트 필터링 되지 않도록 수정
-  • html 주석도 처리해야 한다* 확인하여 내용 누락 할 수 있도록 구성
-  • tag 와 함께 나오는 attribute 도 처리해야 한다* chromiun 의 경우 자주 쓰이는 tag 들에 대해서 별도로 tokenizer 를 하고 있다.</strong></p>
-
-        <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  **// This is a direct transcription of step 4 from:
-  // http://www.whatwg.org/specs/web-apps/current-work/multipage/the-end.html#fragment-case
-         
-  static HTMLTokenizer::State tokenizerStateForContextElement(Element* contextElement, bool reportErrors, const HTMLParserOptions&amp; options)
-         
-  {
-         
-      if (!contextElement)
-         
-          return HTMLTokenizer::DataState;
-         
-         
-      const QualifiedName&amp; contextTag = contextElement-&gt;tagQName();
-         
-         
-      if (contextTag.matches(titleTag) || contextTag.matches(textareaTag))
-         
-          return HTMLTokenizer::RCDATAState;
-         
-      if (contextTag.matches(styleTag)
-         
-          || contextTag.matches(xmpTag)
-         
-          || contextTag.matches(iframeTag)
-         
-          || (contextTag.matches(noembedTag) &amp;&amp; options.pluginsEnabled)
-         
-          || (contextTag.matches(noscriptTag) &amp;&amp; options.scriptEnabled)
-         
-          || contextTag.matches(noframesTag))
-         
-          return reportErrors ? HTMLTokenizer::RAWTEXTState : HTMLTokenizer::PLAINTEXTState;
-         
-      if (contextTag.matches(scriptTag))
-         
-          return reportErrors ? HTMLTokenizer::ScriptDataState : HTMLTokenizer::PLAINTEXTState;
-         
-      if (contextTag.matches(plaintextTag))
-         
-          return HTMLTokenizer::PLAINTEXTState;
-         
-      return HTMLTokenizer::DataState;
-         
-  }**
-</code></pre></div>        </div>
-
-        <p><strong>• <a href="https://github.com/waylan/beautifulsoup/blob/master/bs4/builder/_htmlparser.py">https://github.com/waylan/beautifulsoup/blob/master/bs4/builder/_htmlparser.py</a> - beautiful soup 코드를 참고한다.
-  • 크로미움이나 c++ 소스는 너무 어렵당…<em>처음 가정은 attribute 내용은 꺽쇠를 만날 때 까지 모두 skip 을 할 생각이었다.</em>하지만 문서 중 아래와 같은 문서가 있어 위의 방법은 쓸 수가 없었다.</strong></p>
-
-        <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code></code></pre></div>        </div>
-        <p>**  <input class="download_button" onclick="javascript:urchinTracker('/downloads/314375');" type="submit" name="download" value="--&gt; Stáhnout soubor &lt;--" />**
-  ```</p>
-
-        <p>**• beautiful soup 의 경우 정규식을 쓰고있는데 우리는 정규식을 쓸 수가 없으므로 코드로 beautiful soup 이 하는 일을 흉내내본다.</p>
-        <ol>
-          <li>여는 꺽쇠 ‘&lt;’ 부터 시작</li>
-          <li>tag name</li>
-          <li>tag name 다음에 white space 가 나오면 attribute 앞의 white space 로 간주</li>
-          <li>white space 다음에 나오는 글자는 attribute 이름</li>
-          <li>’=’ 가 나온다</li>
-          <li>’=’ 다음은 ‘’ 이거나 “” 이다.</li>
-          <li>또 white space 가 있는지 검사한다.</li>
-          <li>없다면 ‘/’ 가 있는지 확인하고 tag 파싱을 종료한다
-  • 짝이 안맞는 태그 처리<em>짝이 안맞는 태그의 경우 tag 를 저장하고 있는 stack 을 뒤져 맞는 태그를 발견하는 경우 해당 위치 까지 있는 stack 의 태그를 모두 지운다.</em>지워진 태그로인해 짝이 안맞게 되는 경우 닫는 태그 형태를 하고 있으면 해당 태그는 skip 한다
-  • 태그 처리<em>의 경우or이렇게 태그가 입력 될 수 도 있다는 점을 고려한다.
-  • 
-  • html 개행</em> ‘\n’ 을 만나는 경우 중복은 개행은 하나의 공백으로 처리한다**</li>
-        </ol>
-      </li>
+      <li>파싱 알고리즘 (블로그 전문 인용)
+ <a href="https://velog.io/@keis2957/HTML-%ED%8C%8C%EC%84%9C">HTML 파서</a></li>
     </ul>
-
-    <p><a href="https://velog.io/@keis2957/HTML-%ED%8C%8C%EC%84%9C">HTML 파서</a></p>
   </li>
   <li>Tokens → Nodes 렉싱
     <ul>
@@ -355,7 +124,7 @@
  <span class="nt">&lt;/html&gt;</span>
 </code></pre></div>    </div>
 
-    <p><img src="%E1%84%8B%E1%85%B0%E1%86%B8%20%E1%84%85%E1%85%A6%E1%86%AB%E1%84%83%E1%85%A5%E1%84%85%E1%85%B5%E1%86%BC%E1%84%8B%E1%85%B4%20%E1%84%80%E1%85%AA%E1%84%8C%E1%85%A5%E1%86%BC%20d1b1327c75ea43219b88357ad9ca4d32/DOM2.jpg" alt="%E1%84%8B%E1%85%B0%E1%86%B8%20%E1%84%85%E1%85%A6%E1%86%AB%E1%84%83%E1%85%A5%E1%84%85%E1%85%B5%E1%86%BC%E1%84%8B%E1%85%B4%20%E1%84%80%E1%85%AA%E1%84%8C%E1%85%A5%E1%86%BC%20d1b1327c75ea43219b88357ad9ca4d32/DOM2.jpg" /></p>
+    <p><img src="../../../../../public/assets/2021-06-01-Web-CRP/DOM2.jpg" alt="../../../../../public/assets/2021-06-01-Web-CRP/DOM2.jpg" /></p>
 
     <p>DOM 트리는 올바르게 교정되어 나타낸다.</p>
   </li>

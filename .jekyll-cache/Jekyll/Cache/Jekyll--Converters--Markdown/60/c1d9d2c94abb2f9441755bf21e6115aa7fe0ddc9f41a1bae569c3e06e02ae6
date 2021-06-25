@@ -1,4 +1,4 @@
-I"D(<h1 id="쿠키">쿠키</h1>
+I"�'<p>쿠키란 무엇인가?</p>
 
 <hr />
 
@@ -83,7 +83,7 @@
           <li>사용자가 나중에 같은 사이트를 방문하면, 브라우저는 서버가 이 사용자에게 할당했던 쿠키를 Cookie 요청 헤더에 기술해 전송한다.</li>
         </ul>
 
-        <p><img src="http://tlog.tammolo.com/static/562460df7dd73410c3a875b22b17a57e/3e1c2/Untitled-952601c9-ba42-40e8-912f-83f46ad18c4a.png" alt="http://tlog.tammolo.com/static/562460df7dd73410c3a875b22b17a57e/3e1c2/Untitled-952601c9-ba42-40e8-912f-83f46ad18c4a.png" /></p>
+        <p><img src="../../../../../public/assets/2021-05-18-Web-Cookie/cookie1.png" alt="../../../../../public/assets/2021-05-18-Web-Cookie/cookie1.png" /></p>
 
         <p>웹 서버의 쿠키 할당</p>
 
@@ -91,7 +91,7 @@
           <li>브라우저는 쿠키 정보를 저장할 책임이 있는데, 이 시스템을 ‘HTTP 상태 관리 체계’라고 한다.</li>
         </ul>
 
-        <p><img src="%E1%84%8F%E1%85%AE%E1%84%8F%E1%85%B5%20f133e5763e3748259c8b3c0e5040443e/cookie.jpg" alt="%E1%84%8F%E1%85%AE%E1%84%8F%E1%85%B5%20f133e5763e3748259c8b3c0e5040443e/cookie.jpg" /></p>
+        <p><img src="../../../../../public/assets/2021-05-18-Web-Cookie/cookie.png" alt="../../../../../public/assets/2021-05-18-Web-Cookie/cookie.png" /></p>
 
         <p>Expire / Max-Age 즉 파기되는 시점이 정해진 쿠키는 지속쿠키, 정해지지 않은 쿠키는 세션쿠키라고 한다.</p>
 
