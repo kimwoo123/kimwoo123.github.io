@@ -1,0 +1,313 @@
+I"�K<p>REST API 내용 정리</p>
+
+<h2 id="rest란-무엇인가">REST란 무엇인가</h2>
+
+<ul>
+  <li>“a way of providing interoperability between computer systems on the internet”</li>
+  <li>분산 하이퍼 미디어 시스템을 위한 아키텍처 스타일 (제약조건의 집합)</li>
+  <li>자원을 이름으로 구분하여 해당 자원의 상태를 주고 받는 모든 것</li>
+</ul>
+
+<h2 id="왜-rest-api를-쓰는가">왜 REST API를 쓰는가</h2>
+
+<h3 id="ipc">IPC</h3>
+
+<p>Inter Process Communication</p>
+
+<p>내부 프로세스 간의 통신</p>
+
+<p>과거에는 서로 다른 System에 속한 프로세스 간의 통신을 위해서 소켓을 사용하였다.</p>
+
+<p><strong>소켓 통신</strong></p>
+
+<ul>
+  <li>소켓은 프로세스 간의 통신을 위한 출입구</li>
+  <li>데이터 교환을 위해 양쪽 PC에서 각각 임의의 포트를 정하고 해당 포트 간의 대화를 통해 데이터를 주고 받는 방식. 이때 각각 PC의 포트를 담당하는 소켓은 각각 하나의 프로세스이다.</li>
+  <li>Server와 Client가 계속 연결을 유지하는 양방향 통신</li>
+  <li>실시간으로 데이터를 주고받는 상황이 필요한 경우에 사용된다</li>
+  <li>실시간 동영상 Streaming, 온라인 게임 등</li>
+</ul>
+
+<p>하지만 이러한 소켓 프로그래밍의 조건은</p>
+
+<ul>
+  <li>네트워크는 언제나 빠르고 장애가 없어야한다.</li>
+  <li>서버는 클라이언트가 요청시 언제든 즉시 응답해야한다.</li>
+  <li>클라이언트는 언제든 서버와 바로 연결해야한다.</li>
+  <li>Client - Server 통신과정을 직접 구현해야한다</li>
+</ul>
+
+<p>이러한 조건을 충족시키기 어렵기 때문에. <strong>RPC</strong>라는 새로운 개념이 등장한다. RPC의 목적은 통신에 신경쓰지 않고, 원격지의 자원을 사용하는데에 있다.</p>
+
+<ul>
+  <li>Server에 있는 <a href="https://ko.wikipedia.org/wiki/%EC%9D%B8%ED%84%B0%ED%8E%98%EC%9D%B4%EC%8A%A4_%EC%A0%95%EC%9D%98_%EC%96%B8%EC%96%B4">IDL</a>을 활용해서 개발자는 네트워크 통신과 관련된 작업은 신경 쓰지 않아도 되고, 원격지에 위치한 프로그램을 로컬에 있는 프로그램처럼 사용할 수 있다.</li>
+  <li>원격 프로시저 호출(Remote Procedure Call)은 별도의 원격 제어를 위한 코딩 없이 다른 주소 공간에서 함수나 프로시저를 실행할 수 있게하는 프로세스 간 통신기술이다. 다시 말해 원격 프로시저 호출을 이용하면 프로그래머는 함수가 실행 프로그램에 로컬 위치에 있든 원격 위치에 있든 동일한 코드를 이용할 수 있다.</li>
+</ul>
+
+<p>RPC의 동작방식</p>
+
+<p><img src="https://media.vlpt.us/images/jakeseo_me/post/16327fcc-4da1-4a4b-8dbc-b5b84a933900/image.png" alt="https://media.vlpt.us/images/jakeseo_me/post/16327fcc-4da1-4a4b-8dbc-b5b84a933900/image.png" /></p>
+
+<p>RPC는 상당히 획기적인 방법론이었으며, 분산 환경의 등장에 따라 함께 발전해 온 오래된 기술이다. 따라서 구현체도 CORBA, RMI등 여러가지가 있었는데 이들 모두 로켈에서 제공하는 빠른 속도, 가용성 등을 내세웠지만 정작 구현의 어려움, 지원 기능의 한계 등으로 제대로 활용되지 못했다.</p>
+
+<p><a href="https://stackoverflow.com/questions/3835785/why-has-corba-lost-popularity">Why has CORBA lost popularity?</a></p>
+
+<p>RPC는 소켓 위에서 동작하기 때문에, 사람들은 소켓이 아닌 Web을 사용한 통신과정을 만들고자 시도했다.</p>
+
+<p><a href="https://velog.io/@jakeseo_me/RPC%EB%9E%80">RPC란?</a></p>
+
+<p><strong>SOAP</strong>는 웹상에서 HTTP등을 통해 XML기반의 메세지를  컴퓨터 네트워크 상에서 교환하는 프로토콜이다.</p>
+
+<p>SOAP의 특징</p>
+
+<ul>
+  <li>SOAP을 사용한 HTTP는 기존 원격 기술들에 비해서 프록시와 방화벽에 구애받지 않고 쉽게 통신 가능하다</li>
+  <li>각각 다른 트랜스포트 프로토콜의 사용이 가능하다.</li>
+  <li>플랫폼과 프로그래밍 언어에 독립적이다.</li>
+  <li>확장가능하다</li>
+  <li>구조가 복잡하다</li>
+  <li>REST에 비해 상대적으로 무거우며 속도도 느리다</li>
+</ul>
+
+<p><a href="https://devkingdom.tistory.com/12">[Open API] SOAP 란?</a></p>
+
+<p>Salesforce라는 회사가 인터넷으로 SOAP를 최초로 공개할 당시 SOAP API는 아래와 같은 형식이었다.</p>
+
+<p><img src="https://media.vlpt.us/images/kjh03160/post/fdd698d5-79a1-486c-8345-516dc4601d7d/image.png" alt="https://media.vlpt.us/images/kjh03160/post/fdd698d5-79a1-486c-8345-516dc4601d7d/image.png" /></p>
+
+<p>위와 같이, SOAP는 복잡하고 규칙이 많고 어렵다. 이러한 단점들을 상쇄하기 위해 REST API가 만들어졌다.</p>
+
+<h2 id="다시-rest">다시 REST</h2>
+
+<p>REpresentational State Transfer의 줄임말로. 웹 애플리케이션의 상태(state)를 <a href="https://blog.npcode.com/2017/04/03/rest%ec%9d%98-representation%ec%9d%b4%eb%9e%80-%eb%ac%b4%ec%97%87%ec%9d%b8%ea%b0%80/">representation</a>을 통해 전송(transfer)하는 것을 의미한다</p>
+
+<p>REST API를 처음 제시한 Fielding의 개발 목적은 다음과 같다</p>
+
+<p>“How do i improve HTTP without breaking the web”</p>
+
+<p>웹에 영향을 끼치지 않으면서 HTTP를 개선시키는 방법이 없을까 고민하며, 그는 여러가지 제약조건을 만들었다. 이러한 아키텍처 스타일(제약조건의 집합)에는 어떠한 것들이 있을까.</p>
+
+<ol>
+  <li>클라이언트 - 서버
+    <ul>
+      <li>
+        <p>원문</p>
+
+        <p>Separation of concerns is the principle behind the client-server constraints. By separating the user interface concerns from the data storage concerns, we improve the portability of the user interface across multiple platforms and improve scalability by simplifying the server components. Perhaps most significant to the Web, however, is that the separation allows the components to evolve independently</p>
+      </li>
+    </ul>
+
+    <p>사용자 인터페이스 문제와 데이터 저장소 문제를 분리하여 여러 플랫폼에서 사용자 인터페이스의 수정을 손쉽게 하고, 서버 구성 요소를 단순화하여 확장성을 개선한다. 가장 중요한 점은 분리를 통해 구성 요소가 <strong>독립적으로 진화</strong>할 수 있다는 것이다.</p>
+  </li>
+  <li>무상태
+    <ul>
+      <li>
+        <p>원문</p>
+
+        <p>This constraint induces the properties of visibility, reliability, and scalability. Visibility is improved because a monitoring system does not have to look beyond a single request datum in order to determine the full nature of the request. Reliability is improved because it eases the task of recovering from partial failures [133]. Scalability is improved because not having to store state between requests allows the server component to quickly free resources, and further simplifies implementation because the server doesn’t have to manage resource usage across requests.</p>
+      </li>
+    </ul>
+
+    <p>무상태 제약은 가시성, 안정성, 확장성이 개선된다. 요청이 모든 정보를 담고 있음을 전제로 하며, 요청만 봐도 내용을 식별할 수 있으므로 가시성이 개선되고, 부분적인 장애의 복구 작업을 용이하게 하므로 안정성이 향상되며, 요청 간에 상태를 저장하지 않아도 서버 구성 요소가 리소스를 신속하게 확보할 수 있기 때문에 확장성이 향상된다. 또한 서버가 요청 간에 리소스 사용량을 관리할 필요가 없다. 대부분의 아키텍처 선택과 마찬가지로 상태 무상태 제약은 상충관계가 있다. 단점은 데이터가 서버에 공유 컨텍스트로 남겨질 수 없기 때문에 일련의 요청으로 전송되는 반복 데이터(인터랙션당 오버헤드)를 증가시켜 네트워크 성능을 저하시킬 수 있다는 점이다.</p>
+  </li>
+  <li>캐시
+    <ul>
+      <li>
+        <p>원문</p>
+
+        <p>The advantage of adding cache constraints is that they have the potential to partially or completely eliminate some interactions, improving efficiency, scalability, and user-perceived performance by reducing the average latency of a series of interactions. The trade-off, however, is that a cache can decrease reliability if stale data within the cache differs significantly from the data that would have been obtained had the request been sent directly to the server.</p>
+      </li>
+    </ul>
+
+    <p>캐시 제약 조건을 추가하면 일부의 상호작용을 부분적으로 제거하여 평균 응답 시간을 줄임으로써 효율성, 확장성 및 사용자 체감 성능을 향상시킬 수 있다는 이점이 있다. 그러나 상충관계로, 캐시 내의 오래된 데이터가 서버로 직접 전송되었을 때 얻은 데이터와 크게 다를 경우 캐시는 신뢰성을 보장할 수 없다는 것이 단점이다.</p>
+  </li>
+  <li>균일한 인터페이스
+    <ul>
+      <li>
+        <p>원문</p>
+
+        <p>The central feature that distinguishes the REST architectural style from other network-based styles is its emphasis on a uniform interface between components. By applying the software engineering principle of generality to the component interface, the overall system architecture is simplified and the visibility of interactions is improved. Implementations are decoupled from the services they provide, which encourages independent evolvability.</p>
+      </li>
+    </ul>
+
+    <p>REST 스타일의 핵심은 구성 요소 간의 균일한 인터페이스이다. 보통의 소프트웨어 엔지니어링 원칙을 구성 요소 인터페이스에 적용함으로써 전체 시스템 아키텍처가 단순화되고 상호 작용의 가시성을 개선한다. 구현은 그들이 제공하는 서비스와 분리되어 독립적 진화 가능성을 장려한다.</p>
+
+    <p>그러나 통합된 인터페이스는 정보가 애플리케이션의 특성에 맞는 형식이 아닌 표준화된 형태로 전송되기 때문에 효율성을 저하시킨다. REST 인터페이스는 웹의 일반적인 대규모 하이퍼 미디어 데이터 전송에 효율적이도록 설계되었기 때문에, 결과적으로 다른 형태의 구조적 상호 작용에 최적이 아닌 인터페이스를 설계한다.</p>
+
+    <p>균일한 인터페이스를 얻으려면 구성 요소의 동작을 안내하는 여러 아키텍처 스타일이 필요하다. REST는 네가지 인터페이스 제약 조건으로 정의된다.</p>
+
+    <ul>
+      <li>리소스가 URI로 식별되어야 한다.</li>
+      <li>리소스를 만들거나 업데이트, 삭제할 때 옵션을 담아서 전달한다.</li>
+      <li>
+        <p>메세지가 스스로를 설명해야 한다. (Self-descriptive)</p>
+
+        <p><img src="../../../../../public/assets/2021-05-06-REST-API/restap2.png" alt="../../../../../public/assets/2021-05-06-REST-API/restap2.png" /></p>
+
+        <p>‘id와 title이 무엇을 의미하는지 알 방법이 없다’ 이를 명시하는 방법은 2가지가 있다.</p>
+
+        <p><img src="../../../../../public/assets/2021-05-06-REST-API/Untitled.png" alt="../../../../../public/assets/2021-05-06-REST-API/Untitled.png" /></p>
+
+        <p><a href="https://www.iana.org/assignments/media-types/media-types.xhtml">https://www.iana.org/assignments/media-types/media-types.xhtml</a> 페이지에서 media-type을 확인하거나 생성하여 명시해주는 과정이다.</p>
+
+        <p><img src="../../../../../public/assets/2021-05-06-REST-API/restapi4.png" alt="../../../../../public/assets/2021-05-06-REST-API/restapi4.png" /></p>
+      </li>
+      <li>애플리케이션의 상태는 하이퍼링크를 이용해 전이되어야 한다 (HATEOAS)</li>
+    </ul>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> 왜 이렇게 uniform interface에 많은 규칙이 있는가.
+
+ 독립적 진화를 위해서
+
+ 서버와 클라이언트가 각각 독립적으로 진화한다.
+ 서버의 기능이 변경되어도 클라이언트를 업데이트할 필요가 없다.
+</code></pre></div>    </div>
+  </li>
+  <li>계층화된 시스템
+    <ul>
+      <li>
+        <p>원문</p>
+
+        <p>the layered system style allows an architecture to be composed of hierarchical layers by constraining component behavior such that each component cannot “see” beyond the immediate layer with which they are interacting. By restricting knowledge of the system to a single layer, we place a bound on the overall system complexity and promote substrate independence. Layers can be used to encapsulate legacy services and to protect new services from legacy clients, simplifying components by moving infrequently used functionality to a shared intermediary. Intermediaries can also be used to improve system scalability by enabling load balancing of services across multiple networks and processors.</p>
+      </li>
+    </ul>
+
+    <p>계층으로 구성이 가능해야하며, 각 레이어에 속한 구성요소는 인접하지 않은 레이어의 구성요소를 볼 수 없어야한다. 이렇게 동작을 제한하여 아키텍처를 구성한다. 시스템에 대한 지식을 단일 레이어로 제한함으로써 전체 시스템 복잡성에 한계를 두고 독립성을 추가한다. 계층형 시스템의 가장 큰 단점은 데이터 처리에 오버 헤드와 대기시간을 추가하여 사용자가 체감하는 성능을 저하시킨다는 것이다.</p>
+  </li>
+  <li>
+    <p>명세형 코드 (선택적 제약)</p>
+
+    <p>서버가 네트워크를 통해 클라이언트에 프로그램을 전달하면 그 프로그램이 클라이언트에서 실행될 수 있어야한다.</p>
+  </li>
+</ol>
+
+<h3 id="왜-이-규칙을-지켜야-하는가">왜 이 규칙을 지켜야 하는가?</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>상호운용성에 대한 집착
+- Referer 오타지만 고치지 않음
+- charset 잘못 지은 이름이지만 안 고침
+- HTTP 상태코드 418 포기함(I'm a teapot)
+		참고자료 : [https://developer.mozilla.org/ko/docs/Web/HTTP/Status/418](https://developer.mozilla.org/ko/docs/Web/HTTP/Status/418)
+- HTTP/0.9 아직도 지원함(크롬, 파이어폭스)
+
+상호운용성이 깨지면 하위버전의 웹과 호환이 되지 않아서 웹이 작동하지 않기 때문.
+</code></pre></div></div>
+
+<p><a href="https://www.slideshare.net/WonchangSong1/rpc-restsimpleintro">RPC에서 REST까지 간단한 개념소개</a></p>
+
+<p><a href="https://velog.io/@bmh8993/REST%EC%99%80-RPCgRPC%EA%B0%80-%EB%93%B1%EC%9E%A5%ED%95%98%EA%B8%B0%EA%B9%8C%EC%A7%80">REST와 RPC(gRPC가 등장하기까지)</a></p>
+
+<h3 id="rest한-uri설계">REST한 URI설계</h3>
+
+<p><strong>규칙</strong></p>
+
+<ol>
+  <li>
+    <p>URI는 정보의 자원을 표현해야 함</p>
+
+    <ul>
+      <li>
+        <p>resource는 동사보다는 명사를 사용함</p>
+      </li>
+      <li>
+        <p>resource는 영어 소문자 복수형을 사용하여 표현함</p>
+
+        <p>Ex) <code class="language-plaintext highlighter-rouge">GET /Member/1</code> -&gt; <code class="language-plaintext highlighter-rouge">GET /members/1</code></p>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <p>자원에 대한 행위는 HTTP Method(GET, PUT, POST, DELETE 등)로 표현함</p>
+
+    <ul>
+      <li>
+        <p>URI에 HTTP Method가 들어가면 안된다.</p>
+
+        <p>Ex) <code class="language-plaintext highlighter-rouge">GET /members/delete/1</code> -&gt; <code class="language-plaintext highlighter-rouge">DELETE /members/1</code></p>
+      </li>
+      <li>
+        <p>URI에 행위에 대한 동사 표현이 들어가면 안된다.</p>
+
+        <p>Ex) <code class="language-plaintext highlighter-rouge">GET /members/show/1</code> -&gt; <code class="language-plaintext highlighter-rouge">GET /members/1</code></p>
+
+        <p>Ex) <code class="language-plaintext highlighter-rouge">GET /members/insert/2</code> -&gt; <code class="language-plaintext highlighter-rouge">POST /members/2</code></p>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <p>슬래시 구분자(/ )는 계층 관계를 나타내는데 사용함</p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> Ex)`http://restapi.example.com/houses/apartments`
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>URI 마지막 문자로 슬래시(/ )를 포함하지 않는다. (Django 는 사용한다.)</p>
+
+    <ul>
+      <li>
+        <p>URI에 포함되는 모든 글자는 리소스의 유일한 식별자로 사용되어야 하며 URI가 다르다는 것은 리소스가 다르다는 것이고, 역으로 리소스가 다르면 URI도 달라져야 함 REST API는 분명한 URI를 만들어 통신을 해야 하기 때문에 혼동을 주지 않도록 URI 경로의 마지막에는 슬래시(/)를 사용하지 않는다.</p>
+
+        <p>Ex) <code class="language-plaintext highlighter-rouge">http://restapi.example.com/houses/apartments/ (X)</code></p>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <p>하이픈(- )은 URI 가독성을 높이는데 사용</p>
+
+    <ul>
+      <li>불가피하게 긴 URI경로를 사용하게 된다면 하이픈을 사용해 가독성을 높인다.</li>
+    </ul>
+  </li>
+  <li>
+    <p>밑줄(_)은 URI에 사용하지 않는다.</p>
+
+    <ul>
+      <li>밑줄은 보기 어렵거나 밑줄 때문에 문자가 가려지기도 하므로 가독성을 위해 밑줄은 사용하지 않는다.</li>
+    </ul>
+  </li>
+  <li>
+    <p>URI 경로에는 소문자가 적합하다.</p>
+
+    <ul>
+      <li>
+        <p>URI 경로에 대문자 사용은 피하도록 함.</p>
+      </li>
+      <li>
+        <p>RFC 3986(URI 문법 형식)은 URI 스키마와 호스트를 제외하고는 대소문자를 구별하도록 규정하기 때문.</p>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <p>파일확장자는 URI에 포함하지 않는다.</p>
+
+    <ul>
+      <li>
+        <p>REST API에서는 메시지 바디 내용의 포맷을 나타내기 위한 파일 확장자를 URI 안에 포함시키지 않는다.</p>
+      </li>
+      <li>
+        <p>Accept header를 사용함
+ <code class="language-plaintext highlighter-rouge">http://restapi.example.com/members/soccer/345/photo.jpg (X)</code></p>
+
+        <p>Ex) <code class="language-plaintext highlighter-rouge">GET / members/soccer/345/photo HTTP/1.1 Host: restapi.example.com Accept: image/jpg(O)</code></p>
+      </li>
+    </ul>
+  </li>
+  <li>리소스 간에는 연관 관계가 있는 경우
+    <ul>
+      <li>/리소스명/리소스 ID/관계가 있는 다른 리소스명
+  Ex) <code class="language-plaintext highlighter-rouge">GET : /users/{userid}/devices (일반적으로 소유 'has'의 관계를 표현할 때)</code></li>
+    </ul>
+  </li>
+  <li>:id는 하나의 특정 resource를 나타내는 고유값
+    <ul>
+      <li>
+        <p>하나의 특정 resource를 나타내야 한다</p>
+
+        <p>Ex) student를 생성하는 route: POST /students</p>
+
+        <p>Ex) id=12인 student를 삭제하는 route: DELETE /students/12</p>
+      </li>
+    </ul>
+  </li>
+</ol>
+:ET

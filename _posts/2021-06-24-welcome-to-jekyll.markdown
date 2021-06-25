@@ -2,7 +2,7 @@
 layout: post
 title:  "환영합니다!"
 date:   2021-06-24 23:10:12 +0900
-categories: Web
+categories:
 ---
 
 개발을 하면서 공부한 것들을 적어놓은 블로그입니다.
