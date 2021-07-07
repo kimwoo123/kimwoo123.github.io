@@ -341,6 +341,13 @@ a.sidebar-nav-item:focus {
   margin-top: 0;
 }
 
+footer {
+  text-align: center;
+  font-size: 15px;
+  font-family: sans-serif;
+  color: #9a9a9a;
+}
+
 /* Meta data line below post title */
 .post-date {
   font-size: 70%;
@@ -396,7 +403,7 @@ a.sidebar-nav-item:focus {
   overflow: hidden; /* clearfix */
   margin-left: -1rem;
   margin-right: -1rem;
-  font-family: "PT Sans", Helvetica, Arial, sans-serif;
+  font-family: "sans-serif", Helvetica, Arial, PT Sans;
   color: #ccc;
   text-align: center;
 }
@@ -404,7 +411,7 @@ a.sidebar-nav-item:focus {
 /* Pagination items can be `span`s or `a`s */
 .pagination-item {
   display: block;
-  padding: 1rem;
+  padding: 0.5rem;
   border: 1px solid #eee;
 }
 .pagination-item:first-child {
