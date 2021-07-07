@@ -7,13 +7,13 @@ title: Home
   {% for post in paginator.posts %}
   <div class="post">
     <li class="post-title">
-      <a href="{{ site.url }}/{{ post.url }}">
+      <a href="{{ site.url }}{{ post.url }}">
         {{ post.title }}
       </a>
       <span class="post-date">{{ post.date | date_to_string }}</span>
     </li>
     <hr>
-    <span class="post-content text-truncate">{{ post.content | truncate:60, "..." }}</span>
+    <span class="post-content">{{ post.overview }}</span>
   </div>
   {% endfor %}
 </div>

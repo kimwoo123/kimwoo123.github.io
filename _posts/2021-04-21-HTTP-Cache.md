@@ -3,6 +3,7 @@ layout: post
 title:  "캐시"
 date:   2021-04-21 23:10:12 +0900
 categories: Web
+overview: "HTTP 완벽 가이드 책을 읽으며 내용을 정리한 글"
 ---
 캐시란 무엇인가?
 

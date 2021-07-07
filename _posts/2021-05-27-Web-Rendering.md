@@ -3,6 +3,7 @@ layout: post
 title:  "Web-Rendering"
 date:   2021-05-27 23:10:12 +0900
 categories: Web
+overview: "웹을 렌더링하는 방식의 차이를 정리한 글"
 ---
 웹 렌더링의 방식과 종류
 
@@ -143,3 +144,37 @@ Prerendering은 빌드 타임에 모든 HTML을 렌더링한다. 이미 렌더�
 SSG를 쓰면 그래도 랜더링 로직이 최소화되면서 스크립트 다운로드 + 로딩 시간이 짧아지긴 하지만... 어플리케이션이 커지고 인터렉티브 요소가 많아지면 CSR이나 SSR대비 큰 차이를 느끼긴 힘들더라구요. CI/CD환경 구축시점에서도 빌드에 많은 리소스가 요구되는 SSG의 특성상 개발 파이프라인에 빌드용 클라우드 컴퓨터가 따로 있는데 이게 빌드용으로만 쓰이는거라... 성능이 좋지도 못해서 디플로이까지 시간이 오래 걸리기도 하고 ㅠㅠ
 
 전 보통 로그인이 필요없는 페이지는 SEO때문에 SSR로, 로그인이 필요한 페이지는 어차피 SEO에 영향을 안받으니까 CSR로 만든후에 ServiceWorker를 붙이는 방식으로 만들고 있습니다.
+
+### SSR 개발하고 느낀점
+
+---
+
+SSR을 사용하여 Authenticated 과정을 진행하는 법이 어렵다.
+CSR의 경우 token을 localstrage에 저장하여 사용할 수 있었으나 SSR의 경우 localstorage를 사용할 수 없다.
+SSR의 경우 browser에서 실행되는 것이 아니라 api에서 실행되기 때문에 렌더링이 끝날 때까지
+window, document, navigator, location 같은 객체를 사용할 수 없다.
+rendering 된 후에는 사용할 수 있었다.
+
+Cookie의 경우도 HTTP 브라우저에서 사용하기 때문에 사용할 수 없었다.
+
+대안으로 firebase 라는 툴이 있다는 것을 확인 했고 다음 개발에 사용해 볼 예정이다.
+
+**같은 결과의 css와 js를 적용한 후 웹 서버를 CSR과 SSR로 구현한 경우의 차이**
+
+---
+
+CSR이 웹에 렌더링 된 후 개발자 도구로 확인한 모습
+
+```
+[truncated]<!DOCTYPE html><html><head><link href="/js/app.6029ce48.js" rel="preload" as="script"><link href="/js/chunk-vendors.42656474.js" rel="preload" as="script"></head><body><div id="app"></div><script src="/js/chunk-vendors.4265647
+```
+
+CSR, SPA의 경우 최초 접속시 JS및 Static file을 다운로드 받아서 클라이언트에서 사용한다
+
+SSR의 경우
+
+```
+<span style="color:black; font-size:40px"> server side rendering : page A</span>
+```
+
+SSR, MPA의 경우 JS 및 Static file을 서버에서 렌더링하여 반환한다
