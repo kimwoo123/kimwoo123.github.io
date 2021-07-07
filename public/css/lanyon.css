@@ -314,7 +314,8 @@ a.sidebar-nav-item:focus {
 
 .page,
 .post hr {
-  margin-top: 0;
+  border-bottom: 0px;
+  margin: 0rem;
 }
 
 /* Blog post or page title */
@@ -351,7 +352,10 @@ a.sidebar-nav-item:focus {
 }
 
 .post-overview{
+  margin-top: 0;
   font-family: sans-serif;
+  color: #504e4e;
+  font-size: 70%;
 }
 
 
