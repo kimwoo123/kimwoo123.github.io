@@ -33,6 +33,15 @@
  *
  * Update the foundational and global aspects of the page.
  */
+ 
+ @font-face {
+   font-family: 'NanumSquareRound';
+   src: url("/public/fonts/NanumSquareRound.woff") format('woff');
+   font-weight: normal;
+   font-style: normal;
+  }
+  
+  @import url('../fonts/NanumSquareRound.woff');
 
 /* Prevent scroll on narrow devices */
 html,
@@ -41,11 +50,13 @@ body {
 }
 
 html {
-  font-family: "PT Serif", Georgia, "Times New Roman", serif;
+  /* font-family: "PT Serif", Georgia, "Times New Roman", serif; */
+  font-family: 'sans-serif', NanumSquareRound;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: "PT Sans", Helvetica, Arial, sans-serif;
+  /* font-family: "PT Sans", Helvetica, Arial, sans-serif; */
+  font-family: 'sans-serif', NanumSquareRound;
   font-weight: 400;
   color: #313131;
   letter-spacing: -.025rem;
@@ -306,6 +317,10 @@ a.sidebar-nav-item:focus {
  * Each post is wrapped in `.post` and is used on default and post layouts. Each
  * page is wrapped in `.page` and is only used on the page layout.
  */
+
+.post p {
+  font-family: 'NanumSquareRound',  sans-serif;
+}
 
 .page,
 .post {
