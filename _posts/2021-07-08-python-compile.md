@@ -53,7 +53,7 @@ C/C++로 프로그램을 작성할 때는 컴파일 과정을 행해야한다. �
 
 ![../../../../../public/assets/2021-07-08-python-compile/disassembly.jpg](../../../../../public/assets/2021-07-08-python-compile/disassembly.jpg)
 
-위의 그림은 dis 모듈을 사용하여 소스 코드를 바이트 코드로 변환한 것이다([disassembler](https://ko.wikipedia.org/wiki/%EC%97%AD%EC%96%B4%EC%85%88%EB%B8%94%EB%9F%AC)). 이러한 바이트 코드는 파이썬 Virtual Machine (PVM)에 의해 인터프리터로 해석된다.
+위의 그림은 dis 모듈을 사용하여 소스 코드를 바이트 코드로 변환한 것이다([disassembler](https://ko.wikipedia.org/wiki/%EC%97%AD%EC%96%B4%EC%85%88%EB%B8%94%EB%9F%AC)). 이러한 바이트 코드는 Python Virtual Machine (PVM)에 의해 인터프리터로 해석된다.
 
 ```
 dis.dis('for _ in x: pass')
@@ -79,13 +79,13 @@ dis.dis('for _ in x: pass')
 
 - 인터프리터의 스택 시스템에서 0번째 인덱스에 있는 변수의 이름..!
 
-[How exactly is 파이썬 Bytecode Run in C파이썬?](https://stackoverflow.com/questions/19916729/how-exactly-is-파이썬-bytecode-run-in-c파이썬)
+[How exactly is python Bytecode Run in Cpython?](https://stackoverflow.com/questions/19916729/how-exactly-is-python-bytecode-run-in-cpython)
 
 5번 섹션은 4번 섹션으로 부터의 명령의 인자이다.
 
 6번 섹션은 사람이 읽을 수 있게 표현한 명령 인자이다.
 
-[[파이썬] understanding output of dis - Programmer Sought](https://www.programmersought.com/article/39714880936/)
+[[python] understanding output of dis - Programmer Sought](https://www.programmersought.com/article/39714880936/)
 
 파이썬은 컴파일을 실행할 경우 소스코드를  바이트 코드로 변경한다. 이러한 바이트 코드를 바이트로 나타내기 위해서 co_code 명령어를 사용한다.
 
@@ -114,7 +114,7 @@ Python Language Specification 에는 인터프리터와 컴파일에 대한 구�
 
 [Internal working of python - GeeksforGeeks](https://www.geeksforgeeks.org/internal-working-of-python/)
 
-[python에 대하여, python은 어떻게 동작하는가? python의 장단점](https://cjh5414.github.io/about-python-and-how-python-works/)
+[파이썬에 대하여, 파이썬은 어떻게 동작하는가? 파이썬의 장단점](https://cjh5414.github.io/about-python-and-how-python-works/)
 
 [How does python work?](https://towardsdatascience.com/how-does-python-work-6f21fd197888)
 
