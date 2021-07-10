@@ -159,22 +159,22 @@ Cookie의 경우도 HTTP 브라우저에서 사용하기 때문에 사용할 수
 
 대안으로 firebase 라는 툴이 있다는 것을 확인 했고 다음 개발에 사용해 볼 예정이다.
 
-**같은 결과의 css와 js를 적용한 후 웹 서버를 CSR과 SSR로 구현한 경우의 차이**
+### 같은 결과의 css와 js를 적용한 후 웹 서버를 CSR과 SSR로 구현한 경우의 차이
 
 ---
 
-CSR이 웹에 렌더링 된 후 개발자 도구로 확인한 모습
+CSR 방식으로 웹에 렌더링 된 후 개발자 도구로 확인한 모습
 
 ```
 [truncated]<!DOCTYPE html><html><head><link href="/js/app.6029ce48.js" rel="preload" as="script"><link href="/js/chunk-vendors.42656474.js" rel="preload" as="script"></head><body><div id="app"></div><script src="/js/chunk-vendors.4265647
 ```
 
-CSR, SPA의 경우 최초 접속시 JS및 Static file을 다운로드 받아서 클라이언트에서 사용한다
+CSR 방식의 경우 최초 접속시 JS및 Static file을 다운로드 받아서 클라이언트에서 사용한다
 
-SSR의 경우
+SSR 방식의 경우
 
 ```
 <span style="color:black; font-size:40px"> server side rendering : page A</span>
 ```
 
-SSR, MPA의 경우 JS 및 Static file을 서버에서 렌더링하여 반환한다
+SSR 방식의 경우 JS 및 Static file을 서버에서 렌더링하여 반환한다

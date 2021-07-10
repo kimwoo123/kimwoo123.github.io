@@ -18,7 +18,7 @@ overview: "컴퓨터는 이진법으로 수를 어떻게 표현하는걸까"
 
 일반적으로 컴퓨터에서 사용되는 자료형의 종류이다
 
-![https://3.bp.blogspot.com/-8XChvSX-RaY/VaRBw8Cg69I/AAAAAAAAAMU/bh3rPV6hdM8/s640/01_bit_nibble_byte_word.png](https://3.bp.blogspot.com/-8XChvSX-RaY/VaRBw8Cg69I/AAAAAAAAAMU/bh3rPV6hdM8/s640/01_bit_nibble_byte_word.png)
+![../../../../../public/assets/2021-04-13-number-of-computer/number4.png](../../../../../public/assets/2021-04-13-number-of-computer/number4.png)
 
 이를 C언어 에서는 short, int, long 이라고 사용하여 정수를 저장한다.
 
@@ -103,9 +103,9 @@ print(a + b + c)
 
 2) 2의 보수를 사용하는 방법 (2's Complement)
 
-> 보수란 각 자리의 숫자의 합이 어느 일정한 수가 되게 하는 수이다. 2진수에는 숫자의 합이 1이 되는 1의 보수법과 1의 보수법에 +1을 시켜주는 2의 보수법이 있다.
+보수란 각 자리의 숫자의 합이 어느 일정한 수가 되게 하는 수이다. 2진수에는 숫자의 합이 1이 되는 1의 보수법과 1의 보수법에 +1을 시켜주는 2의 보수법이 있다.
 
-십진수 5는 이진수로 0000 0101 이고 이를 1의 보수법으로 표현하면 1111 1010b이다. 여기에 +1을 하면 1111 1011b로 2의 보수법으로 표현할 수 있다. 이는 십진수 251의 값인데, 2의 보수법에서는 251을 -5로 표현한다.
+십진수 5는 이진수로 0000 0101b 이고 이를 1의 보수법으로 표현하면 1111 1010b이다. 여기에 +1을 하면 1111 1011b로 2의 보수법으로 표현할 수 있다. 이는 십진수 251의 값인데, 2의 보수법에서는 251을 -5로 표현한다.
 
 8bit 포맷의 경우 표현 가능한 숫자 범위가 0 ~ 255인데, 그 반인 127(0111 1111b)까지는 양수, 128(1000 0000b)부터는 거꾸로 음수 -128로 표현하는 것이다.
 
@@ -129,7 +129,7 @@ print(a + b + c)
 
 1) 고정 소수점(Fixed Point) 방식
 
-[https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FbpqJqs%2FbtqE7Q45m4a%2FvRBa0EB2hGftx3kh0yKnpk%2Fimg.png](https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FbpqJqs%2FbtqE7Q45m4a%2FvRBa0EB2hGftx3kh0yKnpk%2Fimg.png)
+![../../../../../public/assets/2021-04-13-number-of-computer/number1.png](../../../../../public/assets/2021-04-13-number-of-computer/number1.png)
 
 32bit의 수인 경우 언제나 1비트를 부호 , 15비트를 정수, 16비트를 소수 표현에 사용하는 식이다.
 
@@ -137,7 +137,7 @@ print(a + b + c)
 
 2) 부동 소수점(Floating Point) 방식
 
-[https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FbQSTc3%2FbtqE57tCUH5%2FEKiDgxHwEqVdIk32Ke1qa1%2Fimg.png](https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FbQSTc3%2FbtqE57tCUH5%2FEKiDgxHwEqVdIk32Ke1qa1%2Fimg.png)
+![../../../../../public/assets/2021-04-13-number-of-computer/number2.png](../../../../../public/assets/2021-04-13-number-of-computer/number2.png)
 
 컴퓨터에서 사용하는 부동 소수점 표기법은 IEEE 754 표현법을 따른다.
 
@@ -145,8 +145,7 @@ print(a + b + c)
 - 지수(exponent) : 7bit로 수의 표현 범위를 나타내며, 지수에 의해서 소수점이 이동한다
 - 가수(fraction) : 양의 정수로 나타낸 근사치를 나타내며, 정밀도에 따라 다르다
 
-[https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2F8FPSb%2FbtqArTfL04U%2FXucGljb3GvW6YRyFz9t6s1%2Fimg.png](https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2F8FPSb%2FbtqArTfL04U%2FXucGljb3GvW6YRyFz9t6s1%2Fimg.png)
-
+![../../../../../public/assets/2021-04-13-number-of-computer/number3.png](../../../../../public/assets/2021-04-13-number-of-computer/number3.png)
 ```
 x = [(-1) ** (부호 비트)] * (1 + 가수) * [2**(지수 + 바이어스)]
 												정규화된 지수 = 1
@@ -178,15 +177,16 @@ x = [(-1) ** (부호 비트)] * (1 + 가수) * [2**(지수 + 바이어스)]
 
 ```
 [(-1) ** (부호 비트)] * (1 + 가수) * [2**(지수 + 바이어스)]
-1 10000101 1101101010...b = -118.625
+1 10000101 1101101010...b -118.625
 부호비트 | 지수 + 바이어스 | 정규화된 가수
-- | 10000101 - 바이어스 == 지수 | 정규화된 가수
-- | 133 - 127 | 정규화된 가수
-- | 6 | 1.1101101010...b
-- | 1.110110101b * 2**6 == 1.110110101b << 6
-- | 1110110.101b
-- | 118 + 0.625
 -118.625
+- | 118 + 0.625
+- | 1110110.101b
+- | 1.110110101b * 2**6 == 1.110110101b << 6
+- | 6(2의 지수)  + 127(바이어스) == x | 1.1101101010...b (정규화된 가수)
+- | 133(x) | 1.1101101010...b
+- | 10000101 | 1.1101101010...b
+1 | 10000101 | 1101101010...b
 
 ```
 
@@ -194,18 +194,12 @@ x = [(-1) ** (부호 비트)] * (1 + 가수) * [2**(지수 + 바이어스)]
 
 IEEE 부동소수점 표시의 목적은 정수와 같은 32bit를 사용하여 실수를 표현하기 위해서이다.
 
-why : 왜 2의 보수법이 아니라 익세스 표현법을 사용하나요?
-
-보이는 수의 크기의 문제
-
-참고자료 : [https://stackoverflow.com/questions/2835278/what-is-a-bias-value-of-floating-point-numbers](https://stackoverflow.com/questions/2835278/what-is-a-bias-value-of-floating-point-numbers)
-
 - 익세스 표현법 (Excess Notation).
 익세스 표현법은 지수부에서 나타낼 수 있는 최대값을 절반으로 나누고
 그 값을 0으로 바꾼 뒤에 그것을 부호와 크기를 나타내는데 사용하는 방법이다
 단정도 실수의 경우 지수부분에 8비트를 사용한다
 8비트의 최대값은 십진수로 255 이진수로 1111 1111b이다
-이의 절반 127, 0111 1111b은 익세스 표현법 상 0을 나타낸다
+이의 절반 127, 0111 1111b은 익세스 표현법상 0을 나타낸다
 이를 바이어스(bias)라고 부른다
 
 ```
@@ -228,3 +222,20 @@ why : 왜 2의 보수법이 아니라 익세스 표현법을 사용하나요?
     유효숫자가 16개이다
 
     64bit 값을 사용한다
+
+> 음수를 표현할 때 왜 2의 보수법이 아니라 익세스 표현법을 사용할까?
+
+각각의 방식으로 십진수를 표현할 경우 2의 보수법은 순서가 도중에 바뀐 형태로 나타나지만 익세스 표현법의 경우 보이는 수의 크기와 실제 수의 크기가 순서대로 나타난다.
+```
+2의 보수법으로 나타낸 -3 = 1111 1101b
+2의 보수법으로 나타낸 3 = 0000 0011b
+익세스 표현법으로 나타낸 -3 = 0111 1100b
+익세스 표현법으로 나타낸 3 = 1000 0011b
+```
+
+지수에 대해 2의 보수법을 사용한 경우 두 번째 MSB가 부호에 의해 정해지므로 작은 음수는 매우 큰 정수처럼 보인다. 대신 익세스 표현법을 사용하면 크기가 순서대로 나타난다.
+
+
+
+참고자료 : [https://stackoverflow.com/questions/2835278/what-is-a-bias-value-of-floating-point-numbers](https://stackoverflow.com/questions/2835278/what-is-a-bias-value-of-floating-point-numbers)
+
