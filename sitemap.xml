@@ -1,56 +1,132 @@
----
-layout: null
-sitemap:
-  exclude: 'yes'
----
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  {% for post in site.posts %}
-    {% unless post.published == false %}
-    <url>
-      <loc>{{ site.url }}{{ post.url }}</loc>
-      {% if post.sitemap.lastmod %}
-        <lastmod>{{ post.sitemap.lastmod | date: "%Y-%m-%d" }}</lastmod>
-      {% elsif post.date %}
-        <lastmod>{{ post.date | date_to_xmlschema }}</lastmod>
-      {% else %}
-        <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
-      {% endif %}
-      {% if post.sitemap.changefreq %}
-        <changefreq>{{ post.sitemap.changefreq }}</changefreq>
-      {% else %}
-        <changefreq>monthly</changefreq>
-      {% endif %}
-      {% if post.sitemap.priority %}
-        <priority>{{ post.sitemap.priority }}</priority>
-      {% else %}
-        <priority>0.5</priority>
-      {% endif %}
-    </url>
-    {% endunless %}
-  {% endfor %}
-  {% for page in site.pages %}
-    {% unless page.sitemap.exclude == "yes" %}
-    <url>
-      <loc>{{ site.url }}{{ page.url | remove: "index.html" }}</loc>
-      {% if page.sitemap.lastmod %}
-        <lastmod>{{ page.sitemap.lastmod | date: "%Y-%m-%d" }}</lastmod>
-      {% elsif page.date %}
-        <lastmod>{{ page.date | date_to_xmlschema }}</lastmod>
-      {% else %}
-        <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
-      {% endif %}
-      {% if page.sitemap.changefreq %}
-        <changefreq>{{ page.sitemap.changefreq }}</changefreq>
-      {% else %}
-        <changefreq>monthly</changefreq>
-      {% endif %}
-      {% if page.sitemap.priority %}
-        <priority>{{ page.sitemap.priority }}</priority>
-      {% else %}
-        <priority>0.3</priority>
-      {% endif %}
-    </url>
-    {% endunless %}
-  {% endfor %}
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+
+
+<url>
+  <loc>http://kimwooseok.com/</loc>
+  <lastmod>2021-07-13T12:43:31+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>http://kimwooseok.com/about/</loc>
+  <lastmod>2021-07-13T12:43:31+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://kimwooseok.com/category/CS/</loc>
+  <lastmod>2021-07-13T12:43:31+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://kimwooseok.com/category/Develop/</loc>
+  <lastmod>2021-07-13T12:43:31+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://kimwooseok.com/category/Python/</loc>
+  <lastmod>2021-07-13T12:43:31+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://kimwooseok.com/category/Web/</loc>
+  <lastmod>2021-07-13T12:43:31+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://kimwooseok.com/page2/</loc>
+  <lastmod>2021-07-13T12:43:31+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://kimwooseok.com/cs/2021/06/29/Network-Packet/</loc>
+  <lastmod>2021-07-13T12:43:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://kimwooseok.com/cs/2021/06/11/CS-API/</loc>
+  <lastmod>2021-07-13T12:43:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://kimwooseok.com/cs/2021/04/13/number-of-computer/</loc>
+  <lastmod>2021-07-13T12:43:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://kimwooseok.com/develop/2021/06/29/DevOps/</loc>
+  <lastmod>2021-07-13T12:43:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://kimwooseok.com/python/2021/06/29/python-compile/</loc>
+  <lastmod>2021-07-13T12:43:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://kimwooseok.com/python/2021/06/18/Python/</loc>
+  <lastmod>2021-07-13T12:43:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://kimwooseok.com/python/2021/06/18/Python-int/</loc>
+  <lastmod>2021-07-13T12:43:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://kimwooseok.com/python/2021/06/18/Python-for/</loc>
+  <lastmod>2021-07-13T12:43:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://kimwooseok.com/web/2021/06/01/encoding/</loc>
+  <lastmod>2021-07-13T12:43:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://kimwooseok.com/web/2021/06/01/Web-CRP/</loc>
+  <lastmod>2021-07-13T12:43:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://kimwooseok.com/web/2021/05/27/Web-Rendering/</loc>
+  <lastmod>2021-07-13T12:43:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://kimwooseok.com/web/2021/05/18/Web-Cookie/</loc>
+  <lastmod>2021-07-13T12:43:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://kimwooseok.com/web/2021/05/06/REST-API/</loc>
+  <lastmod>2021-07-13T12:43:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://kimwooseok.com/web/2021/04/21/HTTP-Cache/</loc>
+  <lastmod>2021-07-13T12:43:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://kimwooseok.com/web/2021/04/10/HTTP-Proxy/</loc>
+  <lastmod>2021-07-13T12:43:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://kimwooseok.com/page3/</loc>
+  <lastmod>2021-07-13T12:43:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://kimwooseok.com/page4/</loc>
+  <lastmod>2021-07-13T12:43:31+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+
+
 </urlset>
