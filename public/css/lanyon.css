@@ -52,6 +52,7 @@ body {
 html {
   /* font-family: "PT Serif", Georgia, "Times New Roman", serif; */
   font-family: 'sans-serif', NanumSquareRound;
+  color: #23120B;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -337,7 +338,7 @@ a.sidebar-nav-item:focus {
 .page-title,
 .post-title,
 .post-title a {
-  color: #4f86aa;
+  color: #21209C;
   font-family: sans-serif;
   font-size: 1.5rem;
   display: block;
@@ -403,7 +404,7 @@ footer {
   color: #999;
 }
 .related-posts li a:hover {
-  color: #268bd2;
+  color: #21209C;
   text-decoration: none;
 }
 .related-posts li a:hover small {
@@ -629,7 +630,7 @@ a.pagination-item:hover {
   padding-bottom: 0.25rem;
   margin-right: 0px;
   font-size: 0.7rem;
-  border-left: 2px solid #f4bf75;
+  border-left: 2px solid #fdb827;
   display: none;
 }
 @media (min-width: 75em){
@@ -655,7 +656,7 @@ a.pagination-item:hover {
   font-weight: bold; 
   transition: all 0.125s ease-in 0s; 
   font-size: 0.75rem;
-  color: #ffc947;
+  color: #fdb827;
   /* color: #9075aa; */
 }
 
