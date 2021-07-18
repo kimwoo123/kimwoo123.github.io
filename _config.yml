@@ -24,3 +24,4 @@ gems: [jekyll-paginate]
 plugins: [jekyll-paginate]
 category_dir: category/
 tag_dir: tag/
+markdown: kramdown

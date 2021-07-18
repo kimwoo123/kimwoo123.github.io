@@ -615,3 +615,64 @@ a.pagination-item:hover {
 .layout-reverse.sidebar-overlay #sidebar-checkbox:checked ~ .sidebar {
   box-shadow: -.25rem 0 .5rem rgba(0,0,0,.1);
 }
+
+.toc {
+  position: absolute;
+  right: 0px;
+  width: 240px;
+  color: default;
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+  margin-right: 0px;
+  font-size: 0.7rem;
+  border-left: 2px solid #f4bf75;
+  display: none;
+}
+@media (min-width: 75em){
+  .toc {
+    width: 240px;
+    display: block;
+  }
+}
+@media (min-width: 85em){
+  .toc {
+    width: 300px;
+    display: block;
+  }
+}
+@media (min-width: 95em){
+  .toc {
+    width: 360px;
+    display: block;
+  }
+}
+
+.toc a.toc-active {
+  font-weight: bold; 
+  transition: all 0.125s ease-in 0s; 
+  font-size: 0.75rem;
+  color: #ffc947;
+  /* color: #9075aa; */
+}
+
+.toc ul {
+  list-style-type: none;
+  margin-bottom: 0.1rem;
+  padding-left: 0rem;
+}
+.toc ul li {
+    padding-left: .5rem;
+}
+
+.toc a {
+    color: #cccccc;
+    text-decoration: none;
+}
+
+.toc a:hover {
+    color:black;
+}

@@ -6,6 +6,7 @@ categories: CS
 overview: "네트워크 패킷 분석"
 ---
 
+
 같은 내용으로 구현한 페이지를 Client Side Rendering과 Server Side Rendering으로 나눠서 구현한 경우의 패킷을 분석해봤다.
 결과적으로 크게 다른 점이 없었다. Line Based text의 경우와 etag의 차이가 있었지만 네트워크 패킷의 차이는 없었다.
 
@@ -67,7 +68,7 @@ Hypertext Transfer Protocol
 - HTTP version: response의 HTTP version을 알려준다
 - status code: 요청에 알맞는 3자리 숫자를 반환한다
 
-[HTTP 상태 코드 - HTTP | MDN](https://developer.mozilla.org/ko/docs/Web/HTTP/Status)
+[HTTP 상태 코드 - HTTP MDN](https://developer.mozilla.org/ko/docs/Web/HTTP/Status)
 
 - Response Phrase: status code에 정의되어 있는 뜻의 여부
 
@@ -107,13 +108,13 @@ SSR인 경우에도 사용한다. 캐시 적중에 관한 문제인 것 같다
 
 **Line based text data**
 
-CSR, SPA의 경우 최초 접속시 JS및 Static file을 다운로드 받아서 클라이언트에서 사용한다
+CSR의 경우 최초 접속시 JS및 Static file을 다운로드 받아서 클라이언트에서 사용한다
 
 ```
 [truncated]<!DOCTYPE html><html><head><link href="/js/app.6029ce48.js" rel="preload" as="script"><link href="/js/chunk-vendors.42656474.js" rel="preload" as="script"></head><body><div id="app"></div><script src="/js/chunk-vendors.4265647
 ```
 
-SSR, MPA의 경우 JS 및 Static file을 서버에서 렌더링하여 반환한다
+SSR의 경우 JS 및 Static file을 서버에서 렌더링하여 반환한다
 
 ```
 <span style="color:black; font-size:40px"> server side rendering : page A</span>
@@ -248,8 +249,6 @@ Frame 152786: 364 bytes on wire (2912 bits), 364 bytes captured (2912 bits) on i
 - Epoch Time은 무엇일까?
 
 [What is a Unix timestamp and why use it?](https://stackoverflow.com/questions/20822821/what-is-a-unix-timestamp-and-why-use-it)
-
-- Frame Number: 최
 
 Time since reference or first frame: SSR = 581 CSR = 81
 

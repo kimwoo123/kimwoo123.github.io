@@ -7,7 +7,7 @@ GEM
       minitest (~> 5.1)
       tzinfo (~> 1.1)
       zeitwerk (~> 2.2, >= 2.2.2)
-    addressable (2.7.0)
+    addressable (2.8.0)
       public_suffix (>= 2.0.2, < 5.0)
     algolia_html_extractor (2.6.4)
       json (~> 2.0)
@@ -21,7 +21,8 @@ GEM
       eventmachine (>= 0.12.9)
       http_parser.rb (~> 0.6.0)
     eventmachine (1.2.7-x64-mingw32)
-    faraday (1.5.0)
+    eventmachine (1.2.7-x86-mingw32)
+    faraday (1.5.1)
       faraday-em_http (~> 1.0)
       faraday-em_synchrony (~> 1.0)
       faraday-excon (~> 1.1)
@@ -36,9 +37,10 @@ GEM
     faraday-excon (1.1.0)
     faraday-httpclient (1.0.1)
     faraday-net_http (1.0.1)
-    faraday-net_http_persistent (1.1.0)
+    faraday-net_http_persistent (1.2.0)
     faraday-patron (1.0.0)
     ffi (1.15.3-x64-mingw32)
+    ffi (1.15.3-x86-mingw32)
     filesize (0.2.0)
     forwardable-extended (2.6.0)
     gemoji (3.0.1)
@@ -86,6 +88,9 @@ GEM
       jekyll (>= 3.8, < 5.0)
     jekyll-sitemap (1.4.0)
       jekyll (>= 3.7, < 5.0)
+    jekyll-toc (0.17.1)
+      jekyll (>= 3.9)
+      nokogiri (~> 1.11)
     jekyll-watch (2.2.1)
       listen (~> 3.0)
     jemoji (0.12.0)
@@ -110,6 +115,8 @@ GEM
     multipart-post (2.1.1)
     nokogiri (1.11.7-x64-mingw32)
       racc (~> 1.4)
+    nokogiri (1.11.7-x86-mingw32)
+      racc (~> 1.4)
     octokit (4.21.0)
       faraday (>= 0.9)
       sawyer (~> 0.8.0, >= 0.5.3)
@@ -123,8 +130,10 @@ GEM
       ffi (~> 1.0)
     rexml (3.2.5)
     rouge (3.26.0)
-    ruby2_keywords (0.0.4)
+    ruby2_keywords (0.0.5)
     safe_yaml (1.0.5)
+    sassc (2.4.0)
+      ffi (~> 1.9)
     sassc (2.4.0-x64-mingw32)
       ffi (~> 1.9)
     sawyer (0.8.2)
@@ -144,6 +153,7 @@ GEM
 
 PLATFORMS
   x64-mingw32
+  x86-mingw32
 
 DEPENDENCIES
   jekyll (~> 4.2.0)
@@ -153,6 +163,7 @@ DEPENDENCIES
   jekyll-include-cache
   jekyll-paginate
   jekyll-sitemap
+  jekyll-toc
   jemoji
   minima (~> 2.5)
   tzinfo (~> 1.2)
@@ -160,4 +171,4 @@ DEPENDENCIES
   wdm (~> 0.1.1)
 
 BUNDLED WITH
-   2.2.21
+   2.2.24
