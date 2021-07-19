@@ -44,8 +44,6 @@ Line-based text data: text/html (1 lines)
 
 HTTP로 전달되는 패킷의 내용은 HTTP Message와 Entity 부분으로 나눠진다.
 
-앞으로 적을 스니펫에서는 같은 행의 CSR 방식과 SSR 방식을 비교하여 기술하고 같을 경우는 하나의 방식만을 적을 것이다.
-
 [HTTP 완벽가이드 - ch15. 엔터티, 인코딩 (Entities and Encoding)](https://www.slideshare.net/cinari4/http-ch15-entities-and-encoding)
 
 **HTTP Message**
@@ -103,7 +101,8 @@ ETag: W/"60c1b1db-12a"\r\n
 
 ```
 
-- CSR과 SSR의 차이일까?
+> CSR과 SSR의 차이일까?
+
 SSR인 경우에도 사용한다. 캐시 적중에 관한 문제인 것 같다
 
 **Line based text data**
