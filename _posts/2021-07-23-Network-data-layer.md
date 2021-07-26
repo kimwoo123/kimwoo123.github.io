@@ -42,9 +42,7 @@ overview: "[컴퓨터 네트워킹 하향식 접근]을 읽으며 정리한 내�
 
 [What is QoS (Quality of Service)?](https://searchunifiedcommunications.techtarget.com/definition/QoS-Quality-of-Service)
 
-**데이터 평면**
 
----
 
 퍼 라우터라는 네트워크 계층의 기능은 한 라우터의 입력 링크에 도착한 데이터그램이 그 라우터의 출력 링크에 어떻게 도착하는지 결정한다. 각 라우터의 데이터 평면 역할은 입력 링크에서 출력 링크로 데이터그램을 전달하는 것이다.
 
