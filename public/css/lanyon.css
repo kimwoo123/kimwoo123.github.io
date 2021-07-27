@@ -355,8 +355,13 @@ a.sidebar-nav-item:focus {
   font-family: sans-serif;
   font-size: 1.5rem;
   display: block;
-  
-  
+}
+
+.post-article .post-overview {
+  background-color: #ddeaff;
+  border-left: 6px solid #0072b3;
+  margin: 0 0 12px;
+  padding: 12px;
 }
 
 .page-title,

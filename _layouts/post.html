@@ -9,6 +9,11 @@ layout: default
       <div class="toc">
         {% include toc.html html=content %}
       </div>
+      <div class="post-overview">
+        <span class="card">
+          <b>개요 : </b>{{ page.overview }}
+        </span>
+      </div>
       {{ content }}
     </article>
 </div>

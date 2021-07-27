@@ -87,30 +87,6 @@ overview: "[컴퓨터 네트워킹 하향식 접근]을 읽으며 정리한 내�
 - 따라서 UDP의 송신 측은 데이터를 원하는 속도로 하위계층으로 보낼 수 있다.
 - Destination Socket만 있다면 정보를 보낼 수 있기 때문에 비연결형
 - 멀티플렉싱, 에러디텍팅을 한다
-- 왜 udp는 차단되는가
-
-    Why is UDP traversal problematic?
-    For UDP flows, the first outgoing packet on a 5-tuple will be used by the firewall as a start-ofsession indicator. But UDP does not have an end-of-session indicator, so the firewall has only
-    two ways to close a pinhole: timing out the pinhole after the interior host does not send traffic
-    for several seconds or the interior host generates a fatal ICMP error. Because there is no
-    reliable way to determine that a session is being stopped, the firewall has a much harder job. It
-    could implement an ALG and be aware of whatever semantics are imposed by the higher-level
-    code on top of UDP. It could also rely on a set of well know application servers to inform it of
-    sessions as they start and end, but that suffers from many challenges like application servers
-    hosted independently of the network on which they are used.
-    Using an ALG, a firewall can determine when the call is terminated and close any dynamic
-    mappings created for the media session. But the problem is session signaling between the
-    WebRTC application running in the browser and the Web server could be using TLS, in which
-    case the ALG no longer has access to the signaling. Moreover, WebRTC does not enforce a
-    particular session signaling protocol to be used, so firewalls using ALGs would fail to inspect the
-    signaling to identify the 5-tuple used for each media stream. Furthermore, the session signaling
-    and the peer-to-peer media may traverse different Firewalls.
-    In the absence of an ALG or help from application servers, there is no way to deterministically
-    tell that this session has been idle for a while or has ended. The net effect is that a firewall that
-    does a good job with general UDP traffic is much more resource intensive than the same
-    functionality for a set of TCP sessions. “Resource intensive” strongly correlates to “expensive”
-    and “brittle”. This tends to cause network operators to block all UDP traffic except for the
-    protocols that they absolutely have to have.
 
 
 ![../../../../../public/assets/2021-07-21-Network-transport-layer/network_stack.jpg](../../../../../public/assets/2021-07-21-Network-transport-layer/network_stack.jpg)
