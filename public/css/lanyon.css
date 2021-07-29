@@ -171,16 +171,16 @@ h1, h2, h3, h4, h5, h6 {
   position: fixed;
   top: 0;
   bottom: 0;
-  left: 0rem;
+  left: -14rem;
   width: 14rem;
-  visibility: hidden;
+  visibility: visible;
   overflow-y: auto;
   font-family: "PT Sans", Helvetica, Arial, sans-serif;
   font-size: .875rem; /* 15px */
   color: rgba(255,255,255,.6);
   background-color: #202020;
-  -webkit-transition: all .3s ease-in-out;
-          transition: all .3s ease-in-out;
+  /* -webkit-transition: all .3s ease-in-out;
+          transition: all .3s ease-in-out; */
 }
 @media (min-width: 30em) {
   .sidebar {
@@ -301,7 +301,7 @@ a.sidebar-nav-item:focus {
  * Read more about it at http://meyerweb.com/eric/thoughts/2011/09/12/.
  */
 
-.wrap,
+/* .wrap,
 .sidebar,
 .sidebar-toggle {
   -webkit-backface-visibility: hidden;
@@ -312,20 +312,25 @@ a.sidebar-nav-item:focus {
 .sidebar-toggle {
   -webkit-transition: -webkit-transform .3s ease-in-out;
           transition: transform .3s ease-in-out;
-}
+} */
 
 #sidebar-checkbox:checked + .sidebar {
   z-index: 10;
   visibility: visible;
 }
+
 #sidebar-checkbox:checked ~ .sidebar,
-#sidebar-checkbox:checked ~ .wrap,
 #sidebar-checkbox:checked ~ .sidebar-toggle {
   -webkit-transform: translateX(14rem);
       -ms-transform: translateX(14rem);
           transform: translateX(14rem);
 }
 
+/* #sidebar-checkbox:checked ~ .wrap {
+  -webkit-transform: translateX(3rem);
+      -ms-transform: translateX(3rem);
+          transform: translateX(3rem);
+} */
 
 /*
  * Posts and pages
