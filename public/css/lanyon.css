@@ -182,11 +182,19 @@ h1, h2, h3, h4, h5, h6 {
   /* -webkit-transition: all .3s ease-in-out;
           transition: all .3s ease-in-out; */
 }
-@media (min-width: 30em) {
+@media (min-width: 48em) {
   .sidebar {
-    font-size: .75rem; /* 14px */
-  }
+    /* 14px */
+    font-size: .75rem; 
+  } 
 }
+  
+/* @media (max-width:  1050px) {
+  .sidebar {
+    display: none;
+  }
+} */
+
 
 /* Sidebar content */
 .sidebar a {
@@ -247,6 +255,11 @@ a.sidebar-nav-item:focus {
   background-color: #fff;
   border-radius: .25rem;
   cursor: pointer;
+}
+@media (min-width:  1050px) {
+  .sidebar-toggle {
+    display: none;
+  }
 }
 
 .sidebar-toggle:before {
@@ -316,7 +329,7 @@ a.sidebar-nav-item:focus {
 
 #sidebar-checkbox:checked + .sidebar {
   z-index: 10;
-  visibility: visible;
+  /* visibility: visible; */
 }
 
 #sidebar-checkbox:checked ~ .sidebar,
@@ -326,11 +339,11 @@ a.sidebar-nav-item:focus {
           transform: translateX(14rem);
 }
 
-/* #sidebar-checkbox:checked ~ .wrap {
-  -webkit-transform: translateX(3rem);
-      -ms-transform: translateX(3rem);
-          transform: translateX(3rem);
-} */
+#sidebar-checkbox:checked ~ .wrap {
+  -webkit-transform: translateX(10rem);
+      -ms-transform: translateX(10rem);
+          transform: translateX(10rem);
+}
 
 /*
  * Posts and pages
