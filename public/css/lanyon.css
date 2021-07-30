@@ -340,9 +340,9 @@ a.sidebar-nav-item:focus {
 }
 
 #sidebar-checkbox:checked ~ .wrap {
-  -webkit-transform: translateX(10rem);
-      -ms-transform: translateX(10rem);
-          transform: translateX(10rem);
+  -webkit-transform: translateX(14rem);
+      -ms-transform: translateX(14rem);
+          transform: translateX(14rem);
 }
 
 /*
