@@ -78,8 +78,8 @@ h1, h2, h3, h4, h5, h6 {
 .wrap {
   position: relative;
   width: 100%;
-    animation: fadein 1000ms ease-out;
-  -webkit-animation: fadein 1000ms ease-out; 
+    animation: fadein 1500ms ease-out;
+  -webkit-animation: fadein 1500ms ease-out; 
 }
 
 @keyframes fadein {
