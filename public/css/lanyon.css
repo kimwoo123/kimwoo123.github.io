@@ -179,8 +179,8 @@ h1, h2, h3, h4, h5, h6 {
   font-size: .875rem; /* 15px */
   color: rgba(255,255,255,.6);
   background-color: #202020;
-  /* -webkit-transition: all .3s ease-in-out;
-          transition: all .3s ease-in-out; */
+  -webkit-transition: all .3s ease-in-out;
+          transition: all .3s ease-in-out;
 }
 @media (min-width: 48em) {
   .sidebar {
@@ -188,12 +188,6 @@ h1, h2, h3, h4, h5, h6 {
     font-size: .75rem; 
   } 
 }
-  
-/* @media (max-width:  1050px) {
-  .sidebar {
-    display: none;
-  }
-} */
 
 
 /* Sidebar content */
@@ -313,7 +307,7 @@ a.sidebar-nav-item:focus {
  * Read more about it at http://meyerweb.com/eric/thoughts/2011/09/12/.
  */
 
-/* .wrap,
+.wrap,
 .sidebar,
 .sidebar-toggle {
   -webkit-backface-visibility: hidden;
@@ -324,7 +318,7 @@ a.sidebar-nav-item:focus {
 .sidebar-toggle {
   -webkit-transition: -webkit-transform .3s ease-in-out;
           transition: transform .3s ease-in-out;
-} */
+}
 
 #sidebar-checkbox:checked + .sidebar {
   z-index: 10;
