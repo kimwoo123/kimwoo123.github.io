@@ -88,9 +88,6 @@ GEM
       jekyll (>= 3.8, < 5.0)
     jekyll-sitemap (1.4.0)
       jekyll (>= 3.7, < 5.0)
-    jekyll-toc (0.17.1)
-      jekyll (>= 3.9)
-      nokogiri (~> 1.11)
     jekyll-watch (2.2.1)
       listen (~> 3.0)
     jemoji (0.12.0)
@@ -163,7 +160,6 @@ DEPENDENCIES
   jekyll-include-cache
   jekyll-paginate
   jekyll-sitemap
-  jekyll-toc
   jemoji
   minima (~> 2.5)
   tzinfo (~> 1.2)
@@ -171,4 +167,4 @@ DEPENDENCIES
   wdm (~> 0.1.1)
 
 BUNDLED WITH
-   2.2.24
+   2.2.33
