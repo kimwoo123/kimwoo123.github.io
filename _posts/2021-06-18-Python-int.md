@@ -142,12 +142,6 @@ b = 100037203685477
 assert restore_number(add_bignum(split_number(a), split_number(b))) == a + b
 ```
 
-참고자료 : [https://rushter.com/blog/python-integer-implementation/](https://rushter.com/blog/python-integer-implementation/)
-
-참고자료 : [https://mingrammer.com/translation-cpython-internals-arbitrary-precision-integer-implementation/](https://mingrammer.com/translation-cpython-internals-arbitrary-precision-integer-implementation/)
-
-참고자료 : [https://github.com/python/cpython/blob/c5bace2bf7874cf47ef56e1d8d19f79ad892eef5/Include/longintrepr.h#L70](https://github.com/python/cpython/blob/c5bace2bf7874cf47ef56e1d8d19f79ad892eef5/Include/longintrepr.h#L70)
-
 ### 레퍼런스 카운트(Reference Counts)
 
 ---
@@ -185,10 +179,19 @@ assert restore_number(add_bignum(split_number(a), split_number(b))) == a + b
 2
 ```
 
-[[Python] 파이썬의 메모리 관리](https://dc7303.github.io/python/2019/08/06/python-memory/)
+참고자료 :
 
 [위키독스](https://wikidocs.net/69557)
+
+[[Python] 파이썬의 메모리 관리](https://dc7303.github.io/python/2019/08/06/python-memory/)
+
 
 [[기초 파이썬] 파이썬의 모든 것은 Object이다 (정수편)](https://ahracho.github.io/posts/python/2017-05-01-everything-in-python-is-object-integer/)
 
 [Why Python is Slow: Looking Under the Hood](http://jakevdp.github.io/blog/2014/05/09/why-python-is-slow/)
+
+[https://rushter.com/blog/python-integer-implementation/](https://rushter.com/blog/python-integer-implementation/)
+
+[https://mingrammer.com/translation-cpython-internals-arbitrary-precision-integer-implementation/](https://mingrammer.com/translation-cpython-internals-arbitrary-precision-integer-implementation/)
+
+[https://github.com/python/cpython/blob/c5bace2bf7874cf47ef56e1d8d19f79ad892eef5/Include/longintrepr.h#L70](https://github.com/python/cpython/blob/c5bace2bf7874cf47ef56e1d8d19f79ad892eef5/Include/longintrepr.h#L70)

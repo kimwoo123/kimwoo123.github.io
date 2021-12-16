@@ -110,19 +110,6 @@ Python Language Specification 에는 인터프리터와 컴파일에 대한 구�
 
 하지만 이러한 경우들은 그 차이에서 생각보다 큰 퍼포먼스를 보여주지 못했고
 
-[Why does python need both a compiler and an interpreter?](https://softwareengineering.stackexchange.com/questions/289429/why-does-python-need-both-a-compiler-and-an-interpreter)
-
-[Internal working of python - GeeksforGeeks](https://www.geeksforgeeks.org/internal-working-of-python/)
-
-[파이썬에 대하여, 파이썬은 어떻게 동작하는가? 파이썬의 장단점](https://cjh5414.github.io/about-python-and-how-python-works/)
-
-[How does python work?](https://towardsdatascience.com/how-does-python-work-6f21fd197888)
-
-[Difference between Byte Code and Machine Code - GeeksforGeeks](https://www.geeksforgeeks.org/difference-between-byte-code-and-machine-code/)
-
-[Understanding python Bytecode](https://towardsdatascience.com/understanding-python-bytecode-e7edaae8734d)
-
-[Why isn't there a python compiler to native machine code?](https://softwareengineering.stackexchange.com/questions/243269/why-isnt-there-a-python-compiler-to-native-machine-code)
 
 ### for 문과 while 문의 속도 차이
 
@@ -138,7 +125,6 @@ for range반복문으로 100을 센 것과 while 반복문으로 100을 센 것�
 
 ![../../../../../public/assets/2021-07-08-python-compile/forwhile2.jpg](../../../../../public/assets/2021-07-08-python-compile/forwhile2.jpg)
 
-for range 반복문의 경우 8번 인덱스에서 14번 인덱스 까지의 작업을 반복하지만 while 반복문의 경우 4번에서 22번 까지의 작업을 반복한다. 
 
 4 LOAD_NAME 로컬 변수 i를 불러오고 
 
@@ -159,3 +145,23 @@ for range 반복문의 경우 8번 인덱스에서 14번 인덱스 까지의 작
 20 JUMP_ABSOLUTE 4번 바이트코드로 이동한다.
 
 22 LOAD_CONST 상수를 스택에 푸쉬한다.
+
+24 RETURN_VALUE TOS(스택 최상단)을 함수 호출자에게 반환한다.
+
+for range 반복문의 경우 8번 인덱스에서 14번 인덱스 까지의 작업을 반복하지만 while 반복문의 경우 4번에서 22번 까지의 작업을 반복한다. 
+
+참고자료:
+
+[Why does python need both a compiler and an interpreter?](https://softwareengineering.stackexchange.com/questions/289429/why-does-python-need-both-a-compiler-and-an-interpreter)
+
+[Internal working of python - GeeksforGeeks](https://www.geeksforgeeks.org/internal-working-of-python/)
+
+[파이썬에 대하여, 파이썬은 어떻게 동작하는가? 파이썬의 장단점](https://cjh5414.github.io/about-python-and-how-python-works/)
+
+[How does python work?](https://towardsdatascience.com/how-does-python-work-6f21fd197888)
+
+[Difference between Byte Code and Machine Code - GeeksforGeeks](https://www.geeksforgeeks.org/difference-between-byte-code-and-machine-code/)
+
+[Understanding python Bytecode](https://towardsdatascience.com/understanding-python-bytecode-e7edaae8734d)
+
+[Why isn't there a python compiler to native machine code?](https://softwareengineering.stackexchange.com/questions/243269/why-isnt-there-a-python-compiler-to-native-machine-code)
