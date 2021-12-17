@@ -123,17 +123,6 @@ Prerendering은 빌드 타임에 모든 HTML을 렌더링한다. 이미 렌더�
 
 처음에 드는 비용을 감안할 수 있다면 SSR을 사용하지 않을 이유가 없다. -Naver D2
 
-[Gray Area on When to use Different Rendering Modes CSR, SSR, SSG](https://kirillibrahim.medium.com/gray-area-on-when-to-use-different-rendering-modes-csr-ssr-ssg-214a636a24a4)
-
-[Google I/O 2019: Day 3 후기](https://hyunseob.github.io/2019/05/26/google-io-2019-day-3/)
-
-[The Benefits of Server Side Rendering Over Client Side Rendering](https://medium.com/walmartglobaltech/the-benefits-of-server-side-rendering-over-client-side-rendering-5d07ff2cefe8)
-
-[Rendering on the Web | Google Developers](https://developers.google.com/web/updates/2019/02/rendering-on-the-web)
-
-[NAVER D2](https://d2.naver.com/helloworld/7804182)
-
-[https://www.youtube.com/watch?v=iZ9csAfU5Os](https://www.youtube.com/watch?v=iZ9csAfU5Os)
 
 ### Amazon 현직자의 유튜브 댓글
 
@@ -179,3 +168,17 @@ SSR 방식의 경우
 ```
 
 SSR 방식의 경우 JS 및 Static file을 서버에서 렌더링하여 반환한다
+
+참고자료:
+
+[Gray Area on When to use Different Rendering Modes CSR, SSR, SSG](https://kirillibrahim.medium.com/gray-area-on-when-to-use-different-rendering-modes-csr-ssr-ssg-214a636a24a4)
+
+[Google I/O 2019: Day 3 후기](https://hyunseob.github.io/2019/05/26/google-io-2019-day-3/)
+
+[The Benefits of Server Side Rendering Over Client Side Rendering](https://medium.com/walmartglobaltech/the-benefits-of-server-side-rendering-over-client-side-rendering-5d07ff2cefe8)
+
+[Rendering on the Web Google Developers](https://developers.google.com/web/updates/2019/02/rendering-on-the-web)
+
+[NAVER D2](https://d2.naver.com/helloworld/7804182)
+
+[https://www.youtube.com/watch?v=iZ9csAfU5Os](https://www.youtube.com/watch?v=iZ9csAfU5Os)
