@@ -1,6 +1,7 @@
 <!-- Target for toggling the sidebar `.sidebar-checkbox` is for regular
      styles, `#sidebar-checkbox` for behavior. -->
-<input type="checkbox" class="sidebar-checkbox" id="sidebar-checkbox">
+     
+  <input type="checkbox" class="sidebar-checkbox" id="sidebar-checkbox" checked>
 
 <!-- Toggleable sidebar -->
 <div class="sidebar" id="sidebar">
@@ -52,3 +53,21 @@
   </p>
 </div>
 </div>
+
+<script>
+  let checkbox = document.querySelector('#sidebar-checkbox');
+  window.addEventListener('resize', function() {
+    let width = window.innerWidth
+    if (width < 1050 && checkbox.checked) {
+      checkbox.checked = false;
+    } else if (width >= 1050) {
+      checkbox.checked = true;
+    }
+  })
+  let width = window.innerWidth
+    if (width < 1050 && checkbox.checked) {
+      checkbox.checked = false;
+    } else if (width >= 1050) {
+      checkbox.checked = true;
+    }
+</script>

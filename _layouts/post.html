@@ -4,38 +4,125 @@ layout: default
 
 <div class="post">
   <h1 class="post-title">{{ page.title }}</h1>
-  <span class="post-date">{{ page.date | date_to_string }}</span>
-  {{ content }}
+    <span class="post-date">{{ page.date | date_to_string }}</span>
+    <article class="post-article">
+      <div class="toc">
+        {% include toc.html html=content %}
+      </div>
+      <div class="post-overview">
+        <span class="card">
+          <b>개요 : </b>{{ page.overview }}
+        </span>
+      </div>
+      {{ content }}
+    </article>
 </div>
 
 <span>같은 카테고리의 글</span>
 {% capture category %}{{ page.categories | first }}{% endcapture %}
 <ul class="related-posts">
   {% for post in site.categories[category] limit: 3 %}
-    <li>
-      <a href="{{ post.url | relative_url }}">
-          [{{ post.title | escape }}]
-      </a>
-    </li>
+    {% if post.url != page.url %}
+      <li>
+        <a href="{{ post.url | relative_url }}">
+            [{{ post.title | escape }}]
+        </a>
+      </li>
+    {% endif %}
   {% endfor %}
 </ul>
 
 
 
-<!-- <div class="related">
-  <h2>다른 게시물</h2>
-  <ul class="related-posts">
-    {% for post in site.related_posts limit:2 %}
-      <li>
-        <h3>
-          <a href="{{ site.baseurl }}{{ post.url }}">
-            {{ post.title }}
-            <small>{{ post.date | date_to_string }}</small>
-          </a>
-        </h3>
-      </li>
-    {% endfor %}
-  </ul>
-</div> -->
+<script>
+  function getTOCNodes(master) {
+    // toc 안의 tag들 전부
+    var nodes = Array.prototype.slice.call(master.getElementsByTagName("*"), 0);
+    // tag 들 중 a 태그
+    var tocNodes = nodes.filter(function(elem) {
+        return elem.tagName == "A";
+    });
+    return tocNodes;
+  }
+  function getHeaderNodes(master) {
+    var nodes = Array.prototype.slice.call(master.getElementsByTagName("*"), 0);
+    var headerNodes = nodes.filter(function(elem) {
+        return elem.tagName == "H1" || elem.tagName == "H2" || elem.tagName == "H3" || elem.tagName == "H4" || elem.tagName == "H5" || elem.tagName == "H6";
+    });
+    return headerNodes;
+  }
 
+  var title = document.getElementsByClassName("post-title")[0];
+  var titleY = window.pageYOffset + title.getBoundingClientRect().top;
+  
+  var article = document.getElementsByClassName("post-article")[0];
+  var articleY = window.pageYOffset + article.getBoundingClientRect().top;
 
+  var toc = document.getElementsByClassName("toc")[0];
+
+  var headerNodes = getHeaderNodes(article);
+  var tocNodes = getTOCNodes(toc);
+
+  var before = undefined;
+
+  document.addEventListener('scroll', function(e) {
+    if (window.scrollY >= articleY-60) {
+      toc.style.cssText = "position: fixed; top: 60px;";
+    }
+    else {
+      toc.style.cssText = "";
+    }
+
+    // h1, h2, h3... 태그들을 찾아서 filter
+    var current = headerNodes.filter(function(header) {
+      // 스크롤 + 뷰포트 상단 값
+      var headerY = window.pageYOffset + header.getBoundingClientRect().top;
+      // 스크롤이 헤더를 지나갔는지 확인
+      return window.scrollY >= headerY - 60;
+    });
+
+    // h1, h2 .. 태그가 0개 이상일 때
+    if (current.length > 0) {
+      current = current[current.length-1];
+
+      // 여래개의 content 에서 a태그들
+      var currentA = tocNodes.filter(function(tocNode) {
+        // 현재 위치의 content의 a태그
+        return tocNode.innerHTML == current.innerHTML;
+      })
+      
+      // 여러개의 a태그들 중 첫번째
+      currentA = currentA[0];
+      if (currentA) {
+        // 이전 content가 비어잇을 경우 현재 것이 할당
+        if (before == undefined) before = currentA;
+
+        // 이전 content가 현재 컨텐트가 아닐 경우
+        if (before != currentA) {
+          // 이전 content의 class 'toc-active'를 제거
+          before.classList.remove("toc-active");
+          // 이전 content에 현재 content를 할당
+          before = currentA;
+        }
+
+        // 현재 content에 'toc-active' class 할당
+        currentA.classList.add("toc-active");
+      }
+      // 현재 content가 없을 경우
+      else {
+        // 이전 content가 있다면
+        if (before) 
+        // 제거
+          before.classList.remove("toc-active");
+      }
+    }
+    // h1, h2 태그가 0개일 떄
+    else {
+      // 이전 태그가 있다면
+      if (before) 
+          // 이전 태그에 class 'toc-active' 제거
+          before.classList.remove("toc-active");
+    }
+
+  }, false);
+</script>

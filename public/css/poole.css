@@ -49,7 +49,7 @@ body {
 
 html {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 16px;
+  font-size: 20px;
   line-height: 1.5;
 }
 @media (min-width: 38em) {
@@ -67,7 +67,7 @@ body {
 
 /* No `:visited` state is required by default (browsers will use `a`) */
 a {
-  color: #268bd2;
+  color: #21209C;
   text-decoration: none;
 }
 a strong {
@@ -349,7 +349,7 @@ tbody tr:nth-child(odd) th {
   display: block;
   margin-top: -.5rem;
   margin-bottom: 1rem;
-  color: #9a9a9a;
+  color: #ffff99;
 }
 
 /* Related posts */
@@ -370,7 +370,7 @@ tbody tr:nth-child(odd) th {
   color: #999;
 }
 .related-posts li a:hover {
-  color: #268bd2;
+  color: #21209C;
   text-decoration: none;
 }
 .related-posts li a:hover small {

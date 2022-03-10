@@ -7,6 +7,8 @@ title: About
   책을 좋아하고 수달을 좋아합니다.
 </p>
 
+<object data="../public/portfolio/w.pdf" width="1000" height="1000"></object>
+
 웹에 관심이 있는 개발자 김우석입니다. 몇몇 글들은 책의 내용을 그대로 타이핑 하는 경우도 있습니다.
 대부분은 제가 글을 읽고 살을 붙여가며 글을 작성하고 있습니다.
 

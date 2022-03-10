@@ -49,9 +49,13 @@ body {
   overflow-x: hidden;
 }
 
+
+
+
 html {
   /* font-family: "PT Serif", Georgia, "Times New Roman", serif; */
   font-family: 'sans-serif', NanumSquareRound;
+  color: #23120B;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -74,6 +78,18 @@ h1, h2, h3, h4, h5, h6 {
 .wrap {
   position: relative;
   width: 100%;
+    animation: fadein 1500ms ease-out;
+  -webkit-animation: fadein 1500ms ease-out; 
+}
+
+@keyframes fadein {
+  from {opacity:0;}
+  to {opacity:1;}
+}
+@-webkit-keyframes fadein { 
+  from {opacity:0;}
+  to {opacity:1;}
+
 }
 
 
@@ -125,7 +141,7 @@ h1, h2, h3, h4, h5, h6 {
   letter-spacing: 0;
 }
 
-@media (max-width: 48em) {
+@media (max-width: 1050px) {
   .masthead-title {
     text-align: center;
   }
@@ -157,7 +173,7 @@ h1, h2, h3, h4, h5, h6 {
   bottom: 0;
   left: -14rem;
   width: 14rem;
-  visibility: hidden;
+  visibility: visible;
   overflow-y: auto;
   font-family: "PT Sans", Helvetica, Arial, sans-serif;
   font-size: .875rem; /* 15px */
@@ -166,11 +182,13 @@ h1, h2, h3, h4, h5, h6 {
   -webkit-transition: all .3s ease-in-out;
           transition: all .3s ease-in-out;
 }
-@media (min-width: 30em) {
+@media (min-width: 48em) {
   .sidebar {
-    font-size: .75rem; /* 14px */
-  }
+    /* 14px */
+    font-size: .75rem; 
+  } 
 }
+
 
 /* Sidebar content */
 .sidebar a {
@@ -232,6 +250,11 @@ a.sidebar-nav-item:focus {
   border-radius: .25rem;
   cursor: pointer;
 }
+@media (min-width:  1050px) {
+  .sidebar-toggle {
+    display: none;
+  }
+}
 
 .sidebar-toggle:before {
   display: inline-block;
@@ -243,16 +266,15 @@ a.sidebar-nav-item:focus {
   background-image:     -ms-linear-gradient(to bottom, #555, #555 20%, #fff 20%, #fff 40%, #555 40%, #555 60%, #fff 60%, #fff 80%, #555 80%, #555 100%);
   background-image:         linear-gradient(to bottom, #555, #555 20%, #fff 20%, #fff 40%, #555 40%, #555 60%, #fff 60%, #fff 80%, #555 80%, #555 100%);
 }
-
-.sidebar-toggle:active,
-#sidebar-checkbox:focus ~ .sidebar-toggle,
+/* .sidebar-toggle:active */
+/* #sidebar-checkbox:focus ~ .sidebar-toggle, */
 #sidebar-checkbox:checked ~ .sidebar-toggle {
   color: #fff;
   background-color: #555;
 }
 
-.sidebar-toggle:active:before,
-#sidebar-checkbox:focus ~ .sidebar-toggle:before,
+/* .sidebar-toggle:active:before,
+#sidebar-checkbox:focus ~ .sidebar-toggle:before, */
 #sidebar-checkbox:checked ~ .sidebar-toggle:before {
   background-image: -webkit-linear-gradient(to bottom, #fff, #fff 20%, #555 20%, #555 40%, #fff 40%, #fff 60%, #555 60%, #555 80%, #fff 80%, #fff 100%);
   background-image:    -moz-linear-gradient(to bottom, #fff, #fff 20%, #555 20%, #555 40%, #fff 40%, #fff 60%, #555 60%, #555 80%, #fff 80%, #fff 100%);
@@ -300,16 +322,26 @@ a.sidebar-nav-item:focus {
 
 #sidebar-checkbox:checked + .sidebar {
   z-index: 10;
-  visibility: visible;
+  /* visibility: visible; */
 }
-#sidebar-checkbox:checked ~ .sidebar,
-#sidebar-checkbox:checked ~ .wrap,
+
 #sidebar-checkbox:checked ~ .sidebar-toggle {
   -webkit-transform: translateX(14rem);
       -ms-transform: translateX(14rem);
           transform: translateX(14rem);
 }
 
+#sidebar-checkbox:checked ~ .sidebar {
+  -webkit-transform: translateX(14rem);
+      -ms-transform: translateX(14rem);
+          transform: translateX(14rem);
+}
+
+/* #sidebar-checkbox:checked .wrap {
+  -webkit-transform: translateX(14rem);
+      -ms-transform: translateX(14rem);
+          transform: translateX(14rem);
+} */
 
 /*
  * Posts and pages
@@ -337,10 +369,17 @@ a.sidebar-nav-item:focus {
 .page-title,
 .post-title,
 .post-title a {
-  color: #4f86aa;
+  color: #21209C;
   font-family: sans-serif;
   font-size: 1.5rem;
   display: block;
+}
+
+.post-article .post-overview {
+  background-color: #ddeaff;
+  border-left: 6px solid #0072b3;
+  margin: 0 0 12px;
+  padding: 12px;
 }
 
 .page-title,
@@ -403,7 +442,7 @@ footer {
   color: #999;
 }
 .related-posts li a:hover {
-  color: #268bd2;
+  color: #21209C;
   text-decoration: none;
 }
 .related-posts li a:hover small {
@@ -592,26 +631,63 @@ a.pagination-item:hover {
 }
 
 
-/*
- * Overlay sidebar
- *
- * Make the sidebar content overlay the viewport content instead of pushing it
- * aside when toggled.
- */
+.toc {
+  position: absolute;
+  right: 0px;
+  width: 240px;
+  color: default;
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+  margin-right: 0px;
+  font-size: 0.7rem;
+  border-left: 2px solid #fdb827;
+  display: none;
+}
+@media (min-width: 75em){
+  .toc {
+    width: 240px;
+    display: block;
+  }
+}
+@media (min-width: 85em){
+  .toc {
+    width: 300px;
+    display: block;
+  }
+}
+@media (min-width: 95em){
+  .toc {
+    width: 360px;
+    display: block;
+  }
+}
 
-.sidebar-overlay #sidebar-checkbox:checked ~ .wrap {
-  -webkit-transform: translateX(0);
-      -ms-transform: translateX(0);
-          transform: translateX(0);
-}
-.sidebar-overlay #sidebar-checkbox:checked ~ .sidebar-toggle {
-  box-shadow: 0 0 0 .25rem #fff;
-}
-.sidebar-overlay #sidebar-checkbox:checked ~ .sidebar {
-  box-shadow: .25rem 0 .5rem rgba(0,0,0,.1);
+.toc a.toc-active {
+  font-weight: bold; 
+  transition: all 0.125s ease-in 0s; 
+  font-size: 0.75rem;
+  color: #fdb827;
+  /* color: #9075aa; */
 }
 
-/* Only one tweak for a reverse layout */
-.layout-reverse.sidebar-overlay #sidebar-checkbox:checked ~ .sidebar {
-  box-shadow: -.25rem 0 .5rem rgba(0,0,0,.1);
+.toc ul {
+  list-style-type: none;
+  margin-bottom: 0.1rem;
+  padding-left: 0rem;
+}
+.toc ul li {
+    padding-left: .5rem;
+}
+
+.toc a {
+    color: #cccccc;
+    text-decoration: none;
+}
+
+.toc a:hover {
+    color:black;
 }

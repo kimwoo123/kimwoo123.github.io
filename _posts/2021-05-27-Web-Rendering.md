@@ -123,28 +123,18 @@ Prerendering은 빌드 타임에 모든 HTML을 렌더링한다. 이미 렌더�
 
 처음에 드는 비용을 감안할 수 있다면 SSR을 사용하지 않을 이유가 없다. -Naver D2
 
-[Gray Area on When to use Different Rendering Modes CSR, SSR, SSG](https://kirillibrahim.medium.com/gray-area-on-when-to-use-different-rendering-modes-csr-ssr-ssg-214a636a24a4)
-
-[Google I/O 2019: Day 3 후기](https://hyunseob.github.io/2019/05/26/google-io-2019-day-3/)
-
-[The Benefits of Server Side Rendering Over Client Side Rendering](https://medium.com/walmartglobaltech/the-benefits-of-server-side-rendering-over-client-side-rendering-5d07ff2cefe8)
-
-[Rendering on the Web | Google Developers](https://developers.google.com/web/updates/2019/02/rendering-on-the-web)
-
-[NAVER D2](https://d2.naver.com/helloworld/7804182)
-
-[https://www.youtube.com/watch?v=iZ9csAfU5Os](https://www.youtube.com/watch?v=iZ9csAfU5Os)
 
 ### Amazon 현직자의 유튜브 댓글
 
 ---
 
+```
 개인적으로는 어떤 방식이라도 HTML을 받아와야 어떤 JS가 필요한지 브라우저가 인식하고 그걸 다시 받아오는 과정이 결국엔 사용자 컴퓨터 성능과 네트워크 환경에 영향을 받는게 성에 안차서... ServiceWorker를 적극 활용하고 있습니다. 어차피 모듈화된 JS들은 빌드시에 이름과 디렉토리를 전부 인지하고 있기에 첫 스크립트 로딩직후에 ServiceWorker로 미리 받아와서 캐싱해두는 형태로요.
 
 SSG를 쓰면 그래도 랜더링 로직이 최소화되면서 스크립트 다운로드 + 로딩 시간이 짧아지긴 하지만... 어플리케이션이 커지고 인터렉티브 요소가 많아지면 CSR이나 SSR대비 큰 차이를 느끼긴 힘들더라구요. CI/CD환경 구축시점에서도 빌드에 많은 리소스가 요구되는 SSG의 특성상 개발 파이프라인에 빌드용 클라우드 컴퓨터가 따로 있는데 이게 빌드용으로만 쓰이는거라... 성능이 좋지도 못해서 디플로이까지 시간이 오래 걸리기도 하고 ㅠㅠ
 
 전 보통 로그인이 필요없는 페이지는 SEO때문에 SSR로, 로그인이 필요한 페이지는 어차피 SEO에 영향을 안받으니까 CSR로 만든후에 ServiceWorker를 붙이는 방식으로 만들고 있습니다.
-
+```
 ### SSR 개발하고 느낀점
 
 ---
@@ -178,3 +168,17 @@ SSR 방식의 경우
 ```
 
 SSR 방식의 경우 JS 및 Static file을 서버에서 렌더링하여 반환한다
+
+참고자료:
+
+[Gray Area on When to use Different Rendering Modes CSR, SSR, SSG](https://kirillibrahim.medium.com/gray-area-on-when-to-use-different-rendering-modes-csr-ssr-ssg-214a636a24a4)
+
+[Google I/O 2019: Day 3 후기](https://hyunseob.github.io/2019/05/26/google-io-2019-day-3/)
+
+[The Benefits of Server Side Rendering Over Client Side Rendering](https://medium.com/walmartglobaltech/the-benefits-of-server-side-rendering-over-client-side-rendering-5d07ff2cefe8)
+
+[Rendering on the Web Google Developers](https://developers.google.com/web/updates/2019/02/rendering-on-the-web)
+
+[NAVER D2](https://d2.naver.com/helloworld/7804182)
+
+[https://www.youtube.com/watch?v=iZ9csAfU5Os](https://www.youtube.com/watch?v=iZ9csAfU5Os)
