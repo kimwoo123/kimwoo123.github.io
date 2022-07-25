@@ -1,9 +1,9 @@
 ---
 layout: post
 title: "파이썬의 메모리 관리"
-date: 2022-07-25 13:51:19
-categories: "Python"
-overview: 파이썬이 메모리를 관리하는 방법
+date: 2022-07-25 13:51:19 +0900
+categories: Python
+overview: "파이썬이 메모리를 관리하는 방법"
 ---
 
 # 파이썬의 메모리 관리
