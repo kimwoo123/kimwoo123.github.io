@@ -106,11 +106,11 @@ True
 
 컨테이너 객체가 생성가 생성될 때마다 파이썬은 0세대 링크드 리스트에 추가한다.
 
-[python_gen0.png](../../../../../public/assets/2022-07-25-python_memory_management/python_gen0.png)
+![python_gen0.png](../../../../../public/assets/2022-07-25-python_memory_management/python_gen0.png)
 
 이렇게 여러 컨테이너 객체를 0세대 링크드 리스트에 추가한 뒤, 객체가 참조하는 다른 객체 확인 및 레퍼런스 카운트를 저장한다. 박스 안의 숫자는 레퍼런스 카운트이고 화살표는 참조하는 다른 객체에 의해 참조되었음을 알려준다.
 
-[python_refcount.png](../../../../../public/assets/2022-07-25-python_memory_management/python_refcount.png)
+![python_refcount.png](../../../../../public/assets/2022-07-25-python_memory_management/python_refcount.png)
 
 만약 순환 참조가 감지된다면 컨테이너 객체의 메모리를 해제시킨다. 그렇다면 어떻게 순환 참조를 감지할까?
 
@@ -133,7 +133,7 @@ typedef union _gc_head
 
 만약 gc_refs 필드가 0이될 경우, 컨테이너 객체에서만 참조하는 컨테이너 객체가 되기 때문에 순환 참조가 되었다 판단하고 메모리를 해제한다.
 
-[python_refcount_dec.png](../../../../../public/assets/2022-07-25-python_memory_management/python_refcount_dec.png)
+![python_refcount_dec.png](../../../../../public/assets/2022-07-25-python_memory_management/python_refcount_dec.png)
 
 이외에 해체되지 않는 메모리들은 다음 세대로 이전되며, 마지막 2세대 까지 남아있는 객체들은 프로그램이 실행을 멈출 때까지 남아있는다.
 
