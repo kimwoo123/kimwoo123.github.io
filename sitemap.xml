@@ -9,153 +9,188 @@
 
 <url>
   <loc>https://kimwooseok.com/</loc>
-  <lastmod>2021-07-29T15:31:10+00:00</lastmod>
+  <lastmod>2022-07-28T15:53:09+00:00</lastmod>
   <priority>1.00</priority>
 </url>
 <url>
   <loc>https://kimwooseok.com/about/</loc>
-  <lastmod>2021-07-29T15:31:10+00:00</lastmod>
+  <lastmod>2022-07-28T15:53:09+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://kimwooseok.com/category/CS/</loc>
-  <lastmod>2021-07-29T15:31:10+00:00</lastmod>
+  <lastmod>2022-07-28T15:53:09+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://kimwooseok.com/category/Develop/</loc>
-  <lastmod>2021-07-29T15:31:10+00:00</lastmod>
+  <lastmod>2022-07-28T15:53:09+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://kimwooseok.com/category/Python/</loc>
-  <lastmod>2021-07-29T15:31:10+00:00</lastmod>
+  <lastmod>2022-07-28T15:53:09+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://kimwooseok.com/category/Web/</loc>
-  <lastmod>2021-07-29T15:31:10+00:00</lastmod>
+  <lastmod>2022-07-28T15:53:09+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://kimwooseok.com/python/2022/07/28/slice-last-item/</loc>
+  <lastmod>2022-07-28T15:53:09+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://kimwooseok.com/python/2022/07/26/python-profile/</loc>
+  <lastmod>2022-07-28T15:53:09+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://kimwooseok.com/python/2022/07/25/python_memory_management/</loc>
+  <lastmod>2022-07-28T15:53:09+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://kimwooseok.com/python/2022/07/12/list-and-tuple-in-python/</loc>
+  <lastmod>2022-07-28T15:53:09+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://kimwooseok.com/cs/2022/03/10/Thread/</loc>
+  <lastmod>2022-07-28T15:53:09+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://kimwooseok.com/page2/</loc>
-  <lastmod>2021-07-29T15:31:10+00:00</lastmod>
+  <lastmod>2022-07-28T15:53:09+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://kimwooseok.com/cs/2021/07/23/Network-data-layer/</loc>
-  <lastmod>2021-07-29T15:31:10+00:00</lastmod>
+  <lastmod>2022-07-28T15:53:09+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://kimwooseok.com/cs/2021/07/22/CS-Kernel/</loc>
-  <lastmod>2021-07-29T15:31:10+00:00</lastmod>
+  <lastmod>2022-07-28T15:53:09+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://kimwooseok.com/cs/2021/07/21/Network-transport-layer/</loc>
-  <lastmod>2021-07-29T15:31:10+00:00</lastmod>
+  <lastmod>2022-07-28T15:53:09+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://kimwooseok.com/cs/2021/07/19/Network-application-layer/</loc>
-  <lastmod>2021-07-29T15:31:10+00:00</lastmod>
+  <lastmod>2022-07-28T15:53:09+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://kimwooseok.com/cs/2021/06/29/Network-Packet/</loc>
-  <lastmod>2021-07-29T15:31:10+00:00</lastmod>
+  <lastmod>2022-07-28T15:53:09+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://kimwooseok.com/cs/2021/06/11/CS-API/</loc>
-  <lastmod>2021-07-29T15:31:10+00:00</lastmod>
+  <lastmod>2022-07-28T15:53:09+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://kimwooseok.com/cs/2021/04/13/number-of-computer/</loc>
-  <lastmod>2021-07-29T15:31:10+00:00</lastmod>
+  <lastmod>2022-07-28T15:53:09+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://kimwooseok.com/develop/2021/07/11/Docker/</loc>
-  <lastmod>2021-07-29T15:31:10+00:00</lastmod>
+  <lastmod>2022-07-28T15:53:09+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://kimwooseok.com/develop/2021/06/29/DevOps/</loc>
-  <lastmod>2021-07-29T15:31:10+00:00</lastmod>
+  <lastmod>2022-07-28T15:53:09+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://kimwooseok.com/python/2021/06/29/python-compile/</loc>
-  <lastmod>2021-07-29T15:31:10+00:00</lastmod>
+  <lastmod>2022-07-28T15:53:09+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://kimwooseok.com/python/2021/06/18/Python/</loc>
-  <lastmod>2021-07-29T15:31:10+00:00</lastmod>
+  <lastmod>2022-07-28T15:53:09+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://kimwooseok.com/python/2021/06/18/Python-int/</loc>
-  <lastmod>2021-07-29T15:31:10+00:00</lastmod>
+  <lastmod>2022-07-28T15:53:09+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://kimwooseok.com/python/2021/06/18/Python-for/</loc>
-  <lastmod>2021-07-29T15:31:10+00:00</lastmod>
+  <lastmod>2022-07-28T15:53:09+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://kimwooseok.com/web/2021/06/01/encoding/</loc>
-  <lastmod>2021-07-29T15:31:10+00:00</lastmod>
+  <lastmod>2022-07-28T15:53:09+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://kimwooseok.com/web/2021/06/01/Web-CRP/</loc>
-  <lastmod>2021-07-29T15:31:10+00:00</lastmod>
+  <lastmod>2022-07-28T15:53:09+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://kimwooseok.com/web/2021/05/27/Web-Rendering/</loc>
-  <lastmod>2021-07-29T15:31:10+00:00</lastmod>
+  <lastmod>2022-07-28T15:53:09+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://kimwooseok.com/web/2021/05/18/Web-Cookie/</loc>
-  <lastmod>2021-07-29T15:31:10+00:00</lastmod>
+  <lastmod>2022-07-28T15:53:09+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://kimwooseok.com/web/2021/05/06/REST-API/</loc>
-  <lastmod>2021-07-29T15:31:10+00:00</lastmod>
+  <lastmod>2022-07-28T15:53:09+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://kimwooseok.com/web/2021/04/21/HTTP-Cache/</loc>
-  <lastmod>2021-07-29T15:31:10+00:00</lastmod>
+  <lastmod>2022-07-28T15:53:09+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://kimwooseok.com/web/2021/04/10/HTTP-Proxy/</loc>
-  <lastmod>2021-07-29T15:31:10+00:00</lastmod>
+  <lastmod>2022-07-28T15:53:09+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://kimwooseok.com/page3/</loc>
-  <lastmod>2021-07-29T15:31:10+00:00</lastmod>
+  <lastmod>2022-07-28T15:53:09+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
+  <loc>https://kimwooseok.com/2021/06/24/welcome-to-jekyll/</loc>
+  <lastmod>2022-07-28T15:53:09+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
   <loc>https://kimwooseok.com/page4/</loc>
-  <lastmod>2021-07-29T15:31:10+00:00</lastmod>
+  <lastmod>2022-07-28T15:53:09+00:00</lastmod>
   <priority>0.51</priority>
 </url>
 <url>
   <loc>https://kimwooseok.com/page5/</loc>
-  <lastmod>2021-07-29T15:31:10+00:00</lastmod>
+  <lastmod>2022-07-28T15:53:09+00:00</lastmod>
   <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://kimwooseok.com/page6/</loc>
+  <lastmod>2022-07-28T15:53:09+00:00</lastmod>
+  <priority>0.33</priority>
 </url>
 
 
