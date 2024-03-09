@@ -18,18 +18,18 @@ overview: "팀 프로젝트"
 - 5명 / 20%
 - AWS EC2, Jenkins, Express, Vue 2, ROS2
 - Apollo server을 활용한 GrpahQL 통신 전반 구현
-- Jenkins를 사용한 CI/CD 구축
+- Jenkins를 사용한 CD 구축
 - ROS2를 활용한 물체 인식
 - Socket.io를 활용한 로봇과 웹 연결
 
-배운 점
+**배운 점**
 
-- Apollo server와 sequelize ORM을 사용하여 백엔드를 구성하며 REST API에서 느꼈던 단점들을 Apollo server가 많이 보완했습니다. Apollo client를 사용하여 state 관리의 개념에 대하여 다시 공부했습니다. Docker compose를 통한 CI/CD 구축을 통해 스크립트 작성이 간편해졌습니다.
+- Apollo server와 sequelize ORM을 사용하여 백엔드를 구성하며 REST API에서 느꼈던 단점들을 Apollo server가 많이 보완했습니다. Apollo client를 사용하여 state 관리의 개념에 대하여 다시 공부했습니다. Docker compose를 통한 CD 구축을 통해 스크립트 작성이 간편해졌습니다.
 
 **시기**
 
 - 프로젝트 진행 기간 (2021/08/23 ~ 2021/10/8)
 
-[GitHub - kimwoo123/HomeFarmT](https://github.com/kimwoo123/HomeFarmT)
+[프로젝트 깃허브](https://github.com/kimwoo123/HomeFarmT)
 
 [◀ 소개 페이지](https://kimwooseok.com/about/)
