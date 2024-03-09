@@ -32,4 +32,4 @@ overview: "팀 프로젝트"
 
 [프로젝트 깃허브](https://github.com/kimwoo123/HomeFarmT)
 
-[◀ 소개 페이지](https://kimwooseok.com/about/)
+[자기소개 페이지](https://kimwooseok.com/about/)
