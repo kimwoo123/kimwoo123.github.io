@@ -1,8 +1,7 @@
 ---
 layout: project
-title:  "URLs"
+title:  "IRC Server"
 date:   2022-03-10 19:10:12 +0900
 categories: Project
 overview: "overview"
-ircserver: 2024-03-09-URLs.html
 ---
