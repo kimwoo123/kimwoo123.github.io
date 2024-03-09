@@ -3,8 +3,9 @@ layout: project
 title:  "IRC Server"
 date:   2023-12-22 19:10:12 +0900
 categories: Project
-overview: "overview"
 ---
+
+![../../../../../../public/assets/Projects/2021-08-30-IRCServer/ircserver.png](../../../../../../public/assets/Projects/2021-08-30-IRCServer/ircserver.png)
 
 **요약**
 
@@ -26,3 +27,7 @@ overview: "overview"
 **시기**
 
 - 프로젝트 진행 기간 (2023/12/24 ~ )
+
+[](https://github.com/kimwoo123/IRC)
+
+[◀ 소개 페이지](https://kimwooseok.com/about/)

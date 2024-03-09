@@ -3,5 +3,32 @@ layout: project
 title:  "HomeFarmT"
 date:   2021-08-30 19:10:12 +0900
 categories: Project
-overview: "overview"
 ---
+
+![../../../../../../public/assets/Projects/2021-08-30-HomeFarmT/homefarmt.gif](../../../../../../public/assets/Projects/2021-08-30-HomeFarmT/homefarmt.gif)
+
+**요약**
+
+- ROS2를 사용하여 터틀봇의 사물 감지 및 자율 주행을 통해 스마트폼의 농작물을 편리하게 관리하는 서비스.
+
+**역할**
+
+- 백엔드 엔지니어
+- 5명 / 20%
+- AWS EC2, Jenkins, Express, Vue 2, ROS2
+- Apollo server을 활용한 GrpahQL 통신 전반 구현
+- Jenkins를 사용한 CI/CD 구축
+- ROS2를 활용한 물체 인식
+- Socket.io를 활용한 로봇과 웹 연결
+
+배운 점
+
+- Apollo server와 sequelize ORM을 사용하여 백엔드를 구성하며 REST API에서 느꼈던 단점들을 Apollo server가 많이 보완했습니다. Apollo client를 사용하여 state 관리의 개념에 대하여 다시 공부했습니다. Docker compose를 통한 CI/CD 구축을 통해 스크립트 작성이 간편해졌습니다.
+
+**시기**
+
+- 프로젝트 진행 기간 (2021/08/23 ~ 2021/10/8)
+
+[GitHub - kimwoo123/HomeFarmT](https://github.com/kimwoo123/HomeFarmT)
+
+[◀ 소개 페이지](https://kimwooseok.com/about/)
