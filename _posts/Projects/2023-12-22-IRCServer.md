@@ -15,16 +15,16 @@ overview: "팀 프로젝트"
 **역할**
 
 - 2명 / 50%
-- kqueue를 사용한 I/O MultiPlexing
+- kqueue를 사용한 I/O multiPlexing
 - multithreading 환경의 동기화
 - 팩토리 메소드 패턴을 사용한 객체설계
-- 효율적인 멀티스레딩을 위한 스레드풀 구현
+- 효율적인 멀티스레딩을 위한 threadpool 구현
 - 유닛테스트 및 CI 구현
 
 **배운 점**
 
 - 잦은 네트워크 I/O가 발생하는 IRC 특성상 multithreading 설계로 더 나은 서버의 퍼포먼스를 발휘할 수 있었습니다. multithreading에서 필요한 동기화와 설계에 대해서 공부하였습니다.
-- 디자인 패턴을 사용한 객체 설계로 유지 보수 및 가독성을 높였습니다. IRC에서 사용하는 여러개의 Command들을 다루는 Command 패턴과 Factory method 패턴, 멀티 스레딩 환경에서 Task들을 순서대로 처리하는 ThreadPool을 구현했습니다.
+- 디자인 패턴을 사용한 객체 설계로 유지 보수 및 가독성을 높였습니다. IRC에서 사용하는 여러개의 command들을 다루는 command 패턴과 factory method 패턴, 멀티 스레딩 환경에서 task들을 순서대로 처리하는 threadPool을 구현했습니다.
 
 **시기**
 

@@ -16,15 +16,15 @@ overview: "팀 프로젝트"
 
 - 백엔드 엔지니어
 - 5명 / 20%
-- AWS EC2, Jenkins, Express, Vue 2, ROS2
-- Apollo server을 활용한 GrpahQL 통신 전반 구현
-- Jenkins를 사용한 CD 구축
+- AWS EC2, jenkins, express, vue 2, ROS2
+- apollo server을 활용한 grpahQL 통신 전반 구현
+- jenkins를 사용한 CD 구축
 - ROS2를 활용한 물체 인식
-- Socket.io를 활용한 로봇과 웹 연결
+- socket.io를 활용한 로봇과 웹 연결
 
 **배운 점**
 
-- Apollo server와 sequelize ORM을 사용하여 백엔드를 구성하며 REST API에서 느꼈던 단점들을 Apollo server가 많이 보완했습니다. Apollo client를 사용하여 state 관리의 개념에 대하여 다시 공부했습니다. Docker compose를 통한 CD 구축을 통해 스크립트 작성이 간편해졌습니다.
+- apollo server와 sequelize ORM을 사용하여 백엔드를 구성하며 REST API에서 느꼈던 단점들을 apollo server가 많이 보완했습니다. apollo client를 사용하여 state 관리의 개념에 대하여 다시 공부했습니다. docker compose를 통한 CD 구축을 통해 스크립트 작성이 간편해졌습니다.
 
 **시기**
 
