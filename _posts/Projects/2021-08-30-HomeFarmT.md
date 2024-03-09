@@ -3,6 +3,7 @@ layout: project
 title:  "HomeFarmT"
 date:   2021-08-30 19:10:12 +0900
 categories: Project
+overview: "팀 프로젝트"
 ---
 
 ![../../../../../../public/assets/Projects/2021-08-30-HomeFarmT/homefarmt.gif](../../../../../../public/assets/Projects/2021-08-30-HomeFarmT/homefarmt.gif)

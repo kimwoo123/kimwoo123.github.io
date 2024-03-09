@@ -3,13 +3,14 @@ layout: project
 title:  "IRC Server"
 date:   2023-12-22 19:10:12 +0900
 categories: Project
+overview: "팀 프로젝트"
 ---
 
 ![../../../../../../public/assets/Projects/2021-08-30-IRCServer/ircserver.png](../../../../../../public/assets/Projects/2021-08-30-IRCServer/ircserver.png)
 
 **요약**
 
-- c++98 버전에서 인터넷 릴레이 채팅(Internet Relay Chat) 실시간 채팅 프로토콜을 준수하여 만든 IRC server.
+- C++98 버전에서 인터넷 릴레이 채팅(Internet Relay Chat) 실시간 채팅 프로토콜을 준수하여 만든 IRC server.
 
 **역할**
 
