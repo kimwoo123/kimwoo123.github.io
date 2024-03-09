@@ -6,7 +6,7 @@ categories: Project
 overview: "팀 프로젝트"
 ---
 
-![../../../../../../public/assets/Projects/2021-08-30-IRCServer/ircserver.png](../../../../../../public/assets/Projects/2021-08-30-IRCServer/ircserver.png)
+![../../../../../../public/assets/Projects/2023-12-22-IRCServer/ircserver.png](../../../../../../public/assets/Projects/2023-12-22-IRCServer/ircserver.png)
 
 **요약**
 
