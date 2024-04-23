@@ -15,7 +15,7 @@ overview: "팀 프로젝트"
 **역할**
 
 - 2명 / 50%
-- kqueue를 사용한 I/O multiPlexing
+- kqueue를 사용한 I/O multiplexing
 - multithreading 환경의 동기화
 - 팩토리 메소드 패턴을 사용한 객체설계
 - 효율적인 멀티스레딩을 위한 threadpool 구현
